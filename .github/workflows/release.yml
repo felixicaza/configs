@@ -136,7 +136,7 @@ jobs:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
          - name: Build package
-           if: steps.npm_check.outputs.exists != 'true'
+           if: steps.npm_check.outputs.exists != 'true' && steps.tag.outputs.pkg_name != '@felixicaza/mrm-presets'
            run: pnpm -C "${{ steps.tag.outputs.pkg_dir }}" build
 
          - name: Verify tarball includes dist files
