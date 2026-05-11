@@ -6,8 +6,7 @@ export default felixicaza(
     {
       files: ['./packages/mrm-presets/package.json'],
       rules: {
-        'package-json/require-exports': 'off',
-        'package-json/require-files': 'off'
+        'package-json/require-exports': 'off'
       }
     },
     {

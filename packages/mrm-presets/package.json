@@ -21,9 +21,12 @@
   "sideEffects": false,
   "type": "commonjs",
   "main": "config.json",
+  "files": [
+    "**/index.js"
+  ],
   "scripts": {
-    "test": "rm -rf .temp; mkdir -p .temp; cd .temp; mrm all -i --dir ..",
-    "test:ci": "mkdir -p .temp; cd .temp; mrm all --dir .."
+    "test": "node ./scripts/test.js --interactive",
+    "test:ci": "node ./scripts/test.js"
   },
   "dependencies": {
     "mrm-core": "7.1.22"
