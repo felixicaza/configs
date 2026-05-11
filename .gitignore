@@ -1,0 +1,14 @@
+.cache
+.DS_Store
+.idea
+*.log
+*.tgz
+coverage
+lib-cov
+logs
+node_modules
+temp
+cache
+dist
+.eslint-config-inspector
+.eslintcache

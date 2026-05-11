@@ -1,0 +1,14 @@
+{
+  "foo": "bar",
+  "baz": 123,
+  "qux": true,
+  "nested": {
+    "a": "b",
+    "c": [1, 2, 3],
+    "d": {
+      "x": false,
+      "y": "hello there"
+    }
+  },
+  "extra-list": ["one", "two", "three"]
+}

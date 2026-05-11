@@ -1,0 +1,46 @@
+{
+  "name": "@felixicaza/oxfmt-config",
+  "version": "0.1.1",
+  "description": "Configuración de Oxfmt con opiniones propias para formatear código de manera consistente.",
+  "keywords": [
+    "oxfmt",
+    "oxfmt-config"
+  ],
+  "homepage": "https://github.com/felixicaza/configs/tree/main/packages/oxfmt-config#readme",
+  "bugs": {
+    "url": "https://github.com/felixicaza/configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixicaza/configs.git"
+  },
+  "license": "MIT",
+  "author": "Felix Icaza <fx.joliett17@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@felixicaza/tsdown-config": "workspace:*",
+    "oxfmt": "0.48.0",
+    "tinyexec": "1.1.2",
+    "tinyglobby": "0.2.16"
+  },
+  "peerDependencies": {
+    "oxfmt": ">=0.42.0"
+  }
+}

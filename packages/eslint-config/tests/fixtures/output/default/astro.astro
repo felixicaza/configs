@@ -1,0 +1,16 @@
+---
+const title = 'Demo'
+const items = ['uno', 'dos'];
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <img alt="logo of company" class="b a" id="hero" src="/logo.png" />
+    <a href="/blog">see more posts</a>
+    <ul>{items.map(item => <li>{item}</li>)}</ul>
+  </body>
+
+</html>

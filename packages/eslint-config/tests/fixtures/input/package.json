@@ -1,0 +1,28 @@
+{
+  "author": {
+    "name": "Felix Icaza"
+  },
+  "license": "MIT",
+  "name": "my-package",
+  "version": "1.0.0",
+  "dependencies": {
+    "zod": "^3.23.8",
+    "astro": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixicaza/configs.git"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsdown"
+  },
+  "description": "This is my package",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
+}

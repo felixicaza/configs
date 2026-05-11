@@ -1,0 +1,54 @@
+{
+  "name": "@felixicaza/configs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Monorepo de configuraciones con opiniones propias, compartibles y reutilizables.",
+  "license": "MIT",
+  "author": "Felix Icaza <fx.joliett17@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:eslint": "pnpm build:tsdown && pnpm -C ./packages/eslint-config build",
+    "build:oxfmt": "pnpm build:tsdown && pnpm -C ./packages/oxfmt-config build",
+    "build:oxlint": "pnpm build:tsdown && pnpm -C ./packages/oxlint-config build",
+    "build:tsdown": "pnpm -C ./packages/tsdown-config build",
+    "dev": "pnpm -r dev",
+    "inspect:eslint": "pnpm -C ./packages/eslint-config inspect",
+    "inspect:eslint:build": "pnpm -C ./packages/eslint-config inspect:build",
+    "lint": "oxlint . && eslint . --cache",
+    "lint:fix": "oxlint . --fix --fix-suggestions --fix-dangerously && eslint . --cache --fix",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build",
+    "release:eslint": "pnpm -C packages/eslint-config exec bumpp --tag \"@felixicaza/eslint-config@%s\" --commit \"release(eslint-config): %s\" --no-push",
+    "release:oxfmt": "pnpm -C packages/oxfmt-config exec bumpp --tag \"@felixicaza/oxfmt-config@%s\" --commit \"release(oxfmt-config): %s\" --no-push",
+    "release:oxlint": "pnpm -C packages/oxlint-config exec bumpp --tag \"@felixicaza/oxlint-config@%s\" --commit \"release(oxlint-config): %s\" --no-push",
+    "release:tsdown": "pnpm -C packages/tsdown-config exec bumpp --tag \"@felixicaza/tsdown-config@%s\" --commit \"release(tsdown-config): %s\" --no-push",
+    "test": "vitest",
+    "test:eslint": "vitest --root packages/eslint-config",
+    "test:oxfmt": "vitest --root packages/oxfmt-config",
+    "test:oxlint": "vitest --root packages/oxlint-config",
+    "test:tsdown": "vitest --root packages/tsdown-config",
+    "typecheck": "oxlint --type-aware --type-check"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm nano-staged"
+  },
+  "nano-staged": {
+    "*": "pnpm lint:fix"
+  },
+  "devDependencies": {
+    "@felixicaza/eslint-config": "workspace:*",
+    "@felixicaza/oxlint-config": "workspace:*",
+    "@types/node": "25.6.2",
+    "bumpp": "11.1.0",
+    "eslint": "9.39.4",
+    "jiti": "2.7.0",
+    "nano-staged": "1.0.2",
+    "oxlint": "1.63.0",
+    "oxlint-tsgolint": "0.22.1",
+    "simple-git-hooks": "2.13.1",
+    "tsdown": "0.22.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.5"
+  }
+}

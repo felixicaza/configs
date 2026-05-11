@@ -1,0 +1,53 @@
+{
+  "name": "@felixicaza/oxlint-config",
+  "version": "0.1.1",
+  "description": "Configuración de Oxlint con opiniones propias para mantener un código limpio y libre de errores comunes.",
+  "keywords": [
+    "oxlint",
+    "oxlint-config"
+  ],
+  "homepage": "https://github.com/felixicaza/configs/tree/main/packages/oxlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/felixicaza/configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixicaza/configs.git"
+  },
+  "license": "MIT",
+  "author": "Felix Icaza",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint-plugin-jsdoc": "62.9.0",
+    "oxlint-plugin-complexity": "2.1.2",
+    "oxlint-plugin-eslint": "1.63.0",
+    "oxlint-tsgolint": "0.22.1"
+  },
+  "devDependencies": {
+    "@felixicaza/tsdown-config": "workspace:*",
+    "oxlint": "1.63.0",
+    "tinyexec": "1.1.2",
+    "tinyglobby": "0.2.16"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.0.0"
+  }
+}

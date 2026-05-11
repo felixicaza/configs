@@ -1,0 +1,58 @@
+{
+  "name": "@felixicaza/eslint-config",
+  "version": "0.1.1",
+  "description": "Configuración de ESLint con opiniones propias para Astro, JSON, JSONC, JSON5 y YAML.",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/felixicaza/configs/tree/main/packages/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/felixicaza/configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixicaza/configs.git"
+  },
+  "license": "MIT",
+  "author": "Felix Icaza <fx.joliett17@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "inspect": "eslint-config-inspector --config ./tests/eslint.config.inspect.ts --basePath ./src --open false",
+    "inspect:build": "pnpm build && eslint-config-inspector build --config ./tests/eslint.config.inspect.ts"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "5.10.0",
+    "eslint-plugin-astro": "1.7.0",
+    "eslint-plugin-jsonc": "3.1.2",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-oxlint": "1.63.0",
+    "eslint-plugin-package-json": "0.91.2",
+    "eslint-plugin-yml": "3.3.2"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "2.0.1",
+    "@felixicaza/tsdown-config": "workspace:*",
+    "eslint": "9.39.4",
+    "tinyexec": "1.1.2",
+    "tinyglobby": "0.2.16"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.38.0"
+  }
+}

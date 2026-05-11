@@ -1,0 +1,20 @@
+blockExoticSubdeps: true
+autoInstallPeers: false
+minimumReleaseAge: 2880
+trustPolicy: no-downgrade
+strictPeerDependencies: true
+strictDepBuilds: true
+
+color: always
+
+packages:
+   - "packages/*"
+
+packageExtensions:
+   "oxlint-plugin-complexity@*":
+      dependencies:
+         "@oxlint/plugins": "*"
+
+allowBuilds:
+   esbuild: true
+   simple-git-hooks: true
