@@ -1,0 +1,33 @@
+{
+  "name": "@felixicaza/mrm-presets",
+  "version": "0.1.1",
+  "description": "Una colección de presets de mrm para configuraciones automáticas.",
+  "keywords": [
+    "mrm",
+    "preset",
+    "mrm-presets"
+  ],
+  "homepage": "https://github.com/felixicaza/configs/tree/main/packages/mrm-presets#readme",
+  "bugs": {
+    "url": "https://github.com/felixicaza/configs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixicaza/configs.git",
+    "directory": "packages/mrm-presets"
+  },
+  "license": "MIT",
+  "author": "Felix Icaza <fx.joliett17@gmail.com>",
+  "sideEffects": false,
+  "type": "commonjs",
+  "main": "config.json",
+  "scripts": {
+    "test": "mkdir -p .temp; cd .temp; mrm security --dir .."
+  },
+  "dependencies": {
+    "mrm-core": "7.1.22"
+  },
+  "devDependencies": {
+    "mrm": "4.1.22"
+  }
+}

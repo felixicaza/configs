@@ -20,6 +20,7 @@
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm build",
     "release:eslint": "pnpm -C packages/eslint-config exec bumpp --tag \"@felixicaza/eslint-config@%s\" --commit \"release(eslint-config): %s\" --no-push",
+    "release:mrm": "pnpm -C packages/mrm-presets exec bumpp --tag \"@felixicaza/mrm-presets@%s\" --commit \"release(mrm-presets): %s\" --no-push",
     "release:oxfmt": "pnpm -C packages/oxfmt-config exec bumpp --tag \"@felixicaza/oxfmt-config@%s\" --commit \"release(oxfmt-config): %s\" --no-push",
     "release:oxlint": "pnpm -C packages/oxlint-config exec bumpp --tag \"@felixicaza/oxlint-config@%s\" --commit \"release(oxlint-config): %s\" --no-push",
     "release:tsdown": "pnpm -C packages/tsdown-config exec bumpp --tag \"@felixicaza/tsdown-config@%s\" --commit \"release(tsdown-config): %s\" --no-push",
