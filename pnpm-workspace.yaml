@@ -19,6 +19,12 @@ trustPolicyExclude:
    - "mrm-core@7.1.22"
    - "semver@6.3.1 || 5.7.2"
 
+minimumReleaseAgeExclude:
+   - "@felixicaza/eslint-config"
+   - "@felixicaza/oxfmt-config"
+   - "@felixicaza/oxlint-config"
+   - "@felixicaza/tsdown-config"
+
 allowBuilds:
    esbuild: true
    simple-git-hooks: true

@@ -67,5 +67,8 @@ jobs:
          - name: Build
            run: pnpm build
 
-         - name: Test
+         - name: Test configs
            run: pnpm test
+
+         - name: Test mrm presets
+           run: pnpm test:mrm:ci

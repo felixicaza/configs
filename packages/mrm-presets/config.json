@@ -1,5 +1,6 @@
 {
   "aliases": {
+    "all": ["npmrc", "pnpm-workspace", "lint"],
     "security": ["npmrc", "pnpm-workspace"]
   }
 }
