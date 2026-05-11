@@ -65,7 +65,7 @@ function task({ precommits, eslintConfig, usingAstro }) {
       .add([
         'import { felixicaza } from \'@felixicaza/eslint-config\'',
         '',
-        `export default felixicaza({${usingAstro.toLowerCase() === 'n' ? ' astro: false ' : ''}})`
+        `export default felixicaza(${usingAstro.toLowerCase() === 'n' ? '{ astro: false }' : ''})`
       ])
       .save()
 

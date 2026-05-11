@@ -12,12 +12,7 @@ const tempDir = path.join(packageRoot, '.temp')
 fs.rmSync(tempDir, { recursive: true, force: true })
 fs.mkdirSync(tempDir, { recursive: true })
 
-const mrmBin = path.join(
-  packageRoot,
-  'node_modules',
-  '.bin',
-  process.platform === 'win32' ? 'mrm.cmd' : 'mrm'
-)
+const mrmCli = require.resolve('mrm/bin/mrm')
 
 const args = ['all']
 
@@ -27,7 +22,7 @@ if (interactive) {
 
 args.push('--dir', '..')
 
-const result = spawnSync(mrmBin, args, {
+const result = spawnSync(process.execPath, [mrmCli, ...args], {
   cwd: tempDir,
   stdio: 'inherit'
 })
