@@ -8,6 +8,7 @@ lib-cov
 logs
 node_modules
 temp
+.temp
 cache
 dist
 .eslint-config-inspector

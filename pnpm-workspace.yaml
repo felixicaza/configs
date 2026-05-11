@@ -15,6 +15,10 @@ packageExtensions:
       dependencies:
          "@oxlint/plugins": "*"
 
+trustPolicyExclude:
+   - "mrm-core@7.1.22"
+   - "semver@6.3.1 || 5.7.2"
+
 allowBuilds:
    esbuild: true
    simple-git-hooks: true

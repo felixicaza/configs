@@ -96,6 +96,7 @@ Un array que recibe objetos de configuración de usuario adicionales, [compatibl
 ## 📚 Proyectos Relacionados
 
 - [`@felixicaza/eslint-config`](./packages/eslint-config)
+- [`@felixicaza/mrm-presets`](./packages/mrm-presets)
 - [`@felixicaza/oxlint-config`](./packages/oxlint-config)
 - [`@felixicaza/tsdown-config`](./packages/tsdown-config)
 
