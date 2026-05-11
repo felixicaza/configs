@@ -11,6 +11,7 @@ Una colección de [presets de mrm](https://mrm.js.org/docs/making-presets) para 
 ## ✨ Características
 
 - 🔒 Medidas de seguridad ante afectaciones a la cadena de suministro mediante `.npmrc` y `pnpm-workspace.yaml`.
+- ⚙️ Configuración automática de Oxlint, ESLint y Precommit Hooks.
 
 ## ⚡ Uso
 
@@ -28,6 +29,20 @@ Windows:
 
 ```powershell
 $ npm exec --package=@felixicaza/mrm-presets --package=mrm -- mrm security --preset @felixicaza/mrm-presets
+```
+
+### ⚓ Lint
+
+Linux/MacOS:
+
+```sh
+$ npx mrm lint --preset @felixicaza/mrm-presets
+```
+
+Windows:
+
+```powershell
+$ npm exec --package=@felixicaza/mrm-presets --package=mrm -- mrm lint --preset @felixicaza/mrm-presets
 ```
 
 ## 📚 Proyectos Relacionados

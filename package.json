@@ -26,6 +26,8 @@
     "release:tsdown": "pnpm -C packages/tsdown-config exec bumpp --tag \"@felixicaza/tsdown-config@%s\" --commit \"release(tsdown-config): %s\" --no-push",
     "test": "vitest",
     "test:eslint": "vitest --root packages/eslint-config",
+    "test:mrm": "pnpm -C packages/mrm-presets test",
+    "test:mrm:ci": "pnpm -C packages/mrm-presets test:ci",
     "test:oxfmt": "vitest --root packages/oxfmt-config",
     "test:oxlint": "vitest --root packages/oxlint-config",
     "test:tsdown": "vitest --root packages/tsdown-config",
