@@ -1,11 +1,11 @@
 {
   "name": "@felixicaza/mrm-presets",
   "version": "0.1.2",
-  "description": "Una colección de presets de mrm para configuraciones automáticas.",
+  "description": "🛠️ Una colección de presets de mrm para configuraciones automáticas.",
   "keywords": [
     "mrm",
     "preset",
-    "mrm-presets"
+    "mrm-preset"
   ],
   "homepage": "https://github.com/felixicaza/configs/tree/main/packages/mrm-presets#readme",
   "bugs": {
