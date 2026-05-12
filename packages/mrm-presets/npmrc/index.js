@@ -1,5 +1,5 @@
 const { lines } = require('mrm-core')
-const { isYes, applyGlobalConfigs } = require('../utils/globalConfig')
+const { isYes, applyGlobalConfigs } = require('../utils/globalConfig.js')
 
 const GLOBAL_NPM_CONFIGS = [
   ['ignore-scripts', 'true'],
