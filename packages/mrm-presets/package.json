@@ -22,7 +22,8 @@
   "type": "commonjs",
   "main": "config.json",
   "files": [
-    "**/index.js"
+    "**/index.js",
+    "utils"
   ],
   "scripts": {
     "test": "node ./scripts/test.js --interactive",
