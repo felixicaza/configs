@@ -1,4 +1,7 @@
-const { execFileSync } = require('node:child_process')
+const { spawnSync } = require('node:child_process')
+const { platform } = require('node:process')
+
+const isWindows = platform === 'win32'
 
 function isYes(value) {
   return String(value).toLowerCase() === 'y'
@@ -13,10 +16,25 @@ function printGlobalConfigPreview(configs, command) {
 
 function runGlobalConfigs(configs, command) {
   return configs.reduce((failed, [key, value]) => {
+    const args = ['config', 'set', key, value]
+    const cmdText = `${command} ${args.join(' ')}`
+
     try {
-      execFileSync(command, ['config', 'set', key, value], { stdio: 'inherit' })
-    } catch {
-      failed.push(`${command} config set ${key} ${value}`)
+      const result = spawnSync(command, args, {
+        stdio: 'inherit',
+        shell: isWindows,
+        windowsHide: true
+      })
+
+      if (result.error || result.status !== 0) {
+        failed.push(cmdText)
+        if (result.error) {
+          console.error(`[error] ${result.error.message}`)
+        }
+      }
+    } catch(error) {
+      failed.push(cmdText)
+      console.error(`[error] ${error.message}`)
     }
 
     return failed
