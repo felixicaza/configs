@@ -22,13 +22,13 @@ Para usar los presets de configuración, simplemente ejecuta los comandos de [mr
 Linux/MacOS:
 
 ```sh
-$ npx mrm security --preset @felixicaza/mrm-presets
+$ npx mrm security --preset @felixicaza/mrm-presets -i
 ```
 
 Windows:
 
 ```powershell
-$ npm exec --package=@felixicaza/mrm-presets --package=mrm -- mrm security --preset @felixicaza/mrm-presets
+$ npm exec --package=@felixicaza/mrm-presets --package=mrm -- mrm security --preset @felixicaza/mrm-presets -i
 ```
 
 ### ⚓ Lint
