@@ -3,7 +3,7 @@
 # 🛠️ @felixicaza/mrm-presets
 
 [![npm version](https://img.shields.io/npm/v/@felixicaza/mrm-presets?color=0b9d5c&logo=npm&logoColor=888888&labelColor=ffffff)](https://npmx.dev/package/@felixicaza/mrm-presets)
-![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=0b9d5c&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)
+[![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=0b9d5c&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)](https://github.com/felixicaza/configs/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/felixicaza/configs?color=0b9d5c&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
 
 Una colección de [presets de mrm](https://mrm.js.org/docs/making-presets) para configuraciones automáticas.
