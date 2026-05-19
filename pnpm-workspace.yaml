@@ -4,6 +4,7 @@ minimumReleaseAge: 2880
 trustPolicy: no-downgrade
 strictPeerDependencies: true
 strictDepBuilds: true
+sharedWorkspaceLockfile: false
 
 color: always
 
@@ -14,6 +15,12 @@ packageExtensions:
    "oxlint-plugin-complexity@*":
       dependencies:
          "@oxlint/plugins": "*"
+   "eslint-plugin-jsdoc@*":
+      dependencies:
+         "eslint": "*"
+   "eslint-plugin-oxlint@*":
+      dependencies:
+         "oxlint": "*"
 
 trustPolicyExclude:
    - "mrm-core@7.1.22"
