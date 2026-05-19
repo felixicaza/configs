@@ -1,0 +1,177 @@
+version: 2
+
+updates:
+   # root
+   - package-ecosystem: "npm"
+     directory: "/"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+     commit-message:
+        prefix: "chore(deps)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # eslint-config
+   - package-ecosystem: "npm"
+     directory: "/packages/eslint-config"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+        - "eslint-config"
+     commit-message:
+        prefix: "chore(eslint)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     ignore:
+        - dependency-name: "eslint"
+          update-types: ["version-update:semver-major"]
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # mrm-presets
+   - package-ecosystem: "npm"
+     directory: "/packages/mrm-presets"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+        - "mrm-presets"
+     commit-message:
+        prefix: "chore(mrm)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # oxfmt-config
+   - package-ecosystem: "npm"
+     directory: "/packages/oxfmt-config"
+     open-pull-requests-limit: 15
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+        - "oxfmt-config"
+     commit-message:
+        prefix: "chore(oxfmt)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # oxlint-config
+   - package-ecosystem: "npm"
+     directory: "/packages/oxlint-config"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+        - "oxlint-config"
+     commit-message:
+        prefix: "chore(oxlint)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # tsdown-config
+   - package-ecosystem: "npm"
+     directory: "/packages/tsdown-config"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "dependencies"
+        - "tsdown-config"
+     commit-message:
+        prefix: "chore(tsdown)"
+        include: scope
+     schedule:
+        interval: "cron"
+        cronjob: "0 0 1,16 * *"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "minor"
+              - "patch"
+
+   # github-actions
+   - package-ecosystem: "github-actions"
+     directory: "/"
+     open-pull-requests-limit: 15
+     target-branch: "main"
+     assignees:
+        - "felixicaza"
+     labels:
+        - "actions"
+     commit-message:
+        prefix: "chore(actions)"
+        include: scope
+     schedule:
+        interval: "monthly"
+        day: "friday"
+        time: "00:00"
+        timezone: "America/Costa_Rica"
+     groups:
+        dependencies:
+           patterns:
+              - "*"
+           update-types:
+              - "major"
