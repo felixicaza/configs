@@ -11,12 +11,15 @@ const GLOBAL_PNPM_CONFIGS = [
 function task({ global }) {
   yaml('pnpm-workspace.yaml')
     .merge({
+      saveExact: true,
       blockExoticSubdeps: true,
       autoInstallPeers: false,
       minimumReleaseAge: 2880,
       trustPolicy: 'no-downgrade',
       strictPeerDependencies: true,
-      strictDepBuilds: true
+      strictDepBuilds: true,
+      dedupePeers: true,
+      shellEmulator: true
     })
     .save()
 
