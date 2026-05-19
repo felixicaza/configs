@@ -38,8 +38,8 @@
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-jsdoc": "62.9.0",
     "oxlint-plugin-complexity": "2.1.2",
-    "oxlint-plugin-eslint": "1.63.0",
-    "oxlint-tsgolint": "0.22.1"
+    "oxlint-plugin-eslint": "1.66.0",
+    "oxlint-tsgolint": "0.23.0"
   },
   "devDependencies": {
     "@felixicaza/tsdown-config": "workspace:*",
