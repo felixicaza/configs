@@ -65,7 +65,7 @@ function task({ precommits, eslintConfig, usingAstro }) {
       .add([
         'import { felixicaza } from \'@felixicaza/eslint-config\'',
         '',
-        `export default felixicaza(${usingAstro.toLowerCase() === 'n' ? '{ astro: false }' : ''})`
+        `export default felixicaza(${(usingAstro ?? 'n').toLowerCase() === 'n' ? '{ astro: false }' : ''})`
       ])
       .save()
 
@@ -80,9 +80,9 @@ function task({ precommits, eslintConfig, usingAstro }) {
         ]
       })
       .save()
-  }
 
-  install(eslintPackages, { dev: true, pnpm: true })
+    install(eslintPackages, { dev: true, pnpm: true })
+  }
 }
 task.description = 'Adds linter configurations'
 
@@ -105,6 +105,7 @@ module.exports.parameters = {
     type: 'input',
     message: 'Using Astro? (y/n)',
     default: 'n',
+    when: (answers) => answers.eslintConfig?.toLowerCase() === 'y',
     validate: (value) => ['y', 'n'].includes(value.toLowerCase()) || 'Please enter y or n'
   }
 }
