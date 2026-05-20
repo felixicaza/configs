@@ -1,0 +1,33 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Package.json example for testing the packageJson option of oxfmt",
+  "license": "ISC",
+  "author": "Felix Icaza <fx.joliett17@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "servor --reload src",
+    "format": "oxfmt . --check",
+    "format:fix": "oxfmt . --write",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@felixicaza/oxfmt-config": "0.1.1",
+    "@felixicaza/oxlint-config": "0.1.1",
+    "eslint": "10.4.0",
+    "nano-staged": "1.0.2",
+    "oxfmt": "0.50.0",
+    "oxlint": "1.65.0",
+    "servor": "4.0.2",
+    "simple-git-hooks": "2.13.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm nano-staged"
+  },
+  "nano-staged": {
+    "*": "pnpm lint:fix"
+  }
+}

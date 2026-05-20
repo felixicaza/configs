@@ -10,7 +10,8 @@ const allDisabled: Required<Options> = {
   base: false,
   jsdoc: false,
   mdx: false,
-  yaml: false
+  yaml: false,
+  packageJson: false
 }
 
 describe('index public API', () => {

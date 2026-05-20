@@ -37,11 +37,14 @@ runWithConfig('without-presets', {
   base: false,
   yaml: false,
   jsdoc: false,
-  mdx: false
+  mdx: false,
+  packageJson: false
 })
 runWithConfig(
   'with-user-config',
-  {},
+  {
+    packageJson: true
+  },
   {
     semi: true,
     trailingComma: 'all',
@@ -94,13 +97,7 @@ function runWithConfig(name: string, options: Options, ...userConfigs: OxfmtConf
       await Promise.all(
         files.map(async(file: string) => {
           const content = await readFile(join(target, file), 'utf-8')
-          const source = await readFile(join(from, file), 'utf-8')
           const outputPath = join(output, file)
-
-          if (content === source) {
-            await rm(outputPath, { force: true })
-            return
-          }
 
           await expect.soft(content).toMatchFileSnapshot(outputPath)
         })

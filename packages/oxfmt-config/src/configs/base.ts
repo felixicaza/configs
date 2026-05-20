@@ -12,3 +12,13 @@ export const base: OxfmtConfig = {
   jsxSingleQuote: true,
   trailingComma: 'none'
 }
+
+/**
+ * Default configuration that is always applied regardless of presets.
+ *
+ * Disable sorting of package.json due that is enabled by default in Oxfmt.
+ * @see https://oxc.rs/docs/guide/usage/formatter/sorting.html#sort-package-json-fields
+ */
+export const defaults: OxfmtConfig = {
+  sortPackageJson: false
+}
