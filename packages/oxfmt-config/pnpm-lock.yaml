@@ -2,6 +2,7 @@ lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: false
+  dedupePeers: true
   excludeLinksFromLockfile: false
 
 packageExtensionsChecksum: sha256-JohHJ/+WBUfpStYUsomSgQb++3bm1t684zlxqlJzAMs=
