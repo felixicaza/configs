@@ -14,11 +14,13 @@ updates:
         - "dependencies"
      commit-message:
         prefix: "chore(deps)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
         timezone: "America/Costa_Rica"
+     ignore:
+        - dependency-name: "eslint"
+          update-types: ["version-update:semver-major"]
      groups:
         dependencies:
            patterns:
@@ -39,7 +41,6 @@ updates:
         - "eslint-config"
      commit-message:
         prefix: "chore(eslint)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
@@ -67,7 +68,6 @@ updates:
         - "mrm-presets"
      commit-message:
         prefix: "chore(mrm)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
@@ -91,7 +91,6 @@ updates:
         - "oxfmt-config"
      commit-message:
         prefix: "chore(oxfmt)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
@@ -116,7 +115,6 @@ updates:
         - "oxlint-config"
      commit-message:
         prefix: "chore(oxlint)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
@@ -141,7 +139,6 @@ updates:
         - "tsdown-config"
      commit-message:
         prefix: "chore(tsdown)"
-        include: scope
      schedule:
         interval: "cron"
         cronjob: "0 0 1,16 * *"
@@ -165,7 +162,6 @@ updates:
         - "actions"
      commit-message:
         prefix: "chore(actions)"
-        include: scope
      schedule:
         interval: "monthly"
         day: "friday"
