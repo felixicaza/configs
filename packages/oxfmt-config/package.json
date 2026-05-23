@@ -1,6 +1,6 @@
 {
   "name": "@felixicaza/oxfmt-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Configuración de Oxfmt con opiniones propias para formatear código de manera consistente.",
   "keywords": [
     "oxfmt",
