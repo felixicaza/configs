@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript } from '../src/configs/index.ts'
+import { complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript, vitest } from '../src/configs/index.ts'
 import { selectPresetConfigs } from '../src/utils/selectPresetConfigs.ts'
 
 describe('utils/selectPresetConfigs', () => {
@@ -69,6 +69,6 @@ describe('utils/selectPresetConfigs', () => {
       vitest: true
     })
 
-    expect(result).toEqual([complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript])
+    expect(result).toEqual([complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript, vitest])
   })
 })
