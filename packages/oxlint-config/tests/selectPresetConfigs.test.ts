@@ -14,7 +14,8 @@ describe('utils/selectPresetConfigs', () => {
       oxc: false,
       promise: false,
       stylistic: false,
-      typescript: false
+      typescript: false,
+      vitest: false
     })
 
     expect(result).toEqual([])
@@ -30,7 +31,8 @@ describe('utils/selectPresetConfigs', () => {
       oxc: false,
       promise: false,
       stylistic: false,
-      typescript: false
+      typescript: false,
+      vitest: false
     })
 
     expect(result).toEqual([complexity])
@@ -46,7 +48,8 @@ describe('utils/selectPresetConfigs', () => {
       oxc: false,
       promise: false,
       stylistic: false,
-      typescript: false
+      typescript: false,
+      vitest: false
     })
 
     expect(result).toEqual([eslint, jsdoc])
@@ -62,7 +65,8 @@ describe('utils/selectPresetConfigs', () => {
       oxc: true,
       promise: true,
       stylistic: true,
-      typescript: true
+      typescript: true,
+      vitest: true
     })
 
     expect(result).toEqual([complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript])

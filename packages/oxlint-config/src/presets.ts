@@ -1,6 +1,6 @@
 import type { PresetName } from './types/index.ts'
 
-import { stylistic, jsdoc, complexity, imports, promise, node, eslint, oxc, typescript } from './configs/index.ts'
+import { stylistic, jsdoc, complexity, imports, promise, node, eslint, oxc, typescript, vitest } from './configs/index.ts'
 
 export const presetEntries = [
   ['stylistic', stylistic],
@@ -11,7 +11,8 @@ export const presetEntries = [
   ['node', node],
   ['eslint', eslint],
   ['oxc', oxc],
-  ['typescript', typescript]
+  ['typescript', typescript],
+  ['vitest', vitest]
 ] as const
 
 export const defaultOptions: Readonly<Record<PresetName, boolean>> = {
@@ -23,5 +24,6 @@ export const defaultOptions: Readonly<Record<PresetName, boolean>> = {
   node: true,
   eslint: true,
   oxc: true,
-  typescript: true
+  typescript: true,
+  vitest: false
 }

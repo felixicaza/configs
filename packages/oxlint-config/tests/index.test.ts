@@ -16,7 +16,8 @@ const allDisabled: Required<Options> = {
   oxc: false,
   promise: false,
   stylistic: false,
-  typescript: false
+  typescript: false,
+  vitest: false
 }
 
 describe('index public API', () => {
