@@ -1,7 +1,7 @@
 {
   "name": "@felixicaza/oxlint-config",
   "version": "0.1.1",
-  "description": "Configuración de Oxlint con opiniones propias para mantener un código limpio y libre de errores comunes.",
+  "description": "⚓ Configuración de Oxlint con opiniones propias para mantener un código limpio y libre de errores comunes.",
   "keywords": [
     "oxlint",
     "oxlint-config"
@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felixicaza/configs.git"
+    "url": "git+https://github.com/felixicaza/configs.git",
+    "directory": "packages/oxlint-config"
   },
   "license": "MIT",
   "author": "Felix Icaza",
