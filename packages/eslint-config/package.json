@@ -39,18 +39,18 @@
   "dependencies": {
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-astro": "1.7.0",
-    "eslint-plugin-jsonc": "3.1.2",
+    "eslint-plugin-jsonc": "3.2.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-oxlint": "1.66.0",
-    "eslint-plugin-package-json": "1.1.0",
-    "eslint-plugin-yml": "3.3.2"
+    "eslint-plugin-oxlint": "1.67.0",
+    "eslint-plugin-package-json": "1.2.0",
+    "eslint-plugin-yml": "3.4.0"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "3.0.2",
+    "@eslint/config-inspector": "3.0.4",
     "@felixicaza/tsdown-config": "workspace:*",
     "eslint": "9.39.4",
-    "tinyexec": "1.1.2",
-    "tinyglobby": "0.2.16"
+    "tinyexec": "1.2.3",
+    "tinyglobby": "0.2.17"
   },
   "peerDependencies": {
     "eslint": ">=9.38.0"
