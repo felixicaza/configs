@@ -2,6 +2,7 @@ lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: false
+  dedupePeers: true
   excludeLinksFromLockfile: false
 
 packageExtensionsChecksum: sha256-JohHJ/+WBUfpStYUsomSgQb++3bm1t684zlxqlJzAMs=
@@ -54,29 +55,29 @@ importers:
     dependencies:
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
-        version: 5.10.0(eslint@9.39.4(jiti@2.7.0))
+        version: 5.10.0(eslint@9.39.4)
       eslint-plugin-astro:
         specifier: 1.7.0
-        version: 1.7.0(eslint@9.39.4(jiti@2.7.0))
+        version: 1.7.0(eslint@9.39.4)
       eslint-plugin-jsonc:
         specifier: 3.2.0
-        version: 3.2.0(eslint@9.39.4(jiti@2.7.0))
+        version: 3.2.0(eslint@9.39.4)
       eslint-plugin-jsx-a11y:
         specifier: 6.10.2
-        version: 6.10.2(eslint@9.39.4(jiti@2.7.0))
+        version: 6.10.2(eslint@9.39.4)
       eslint-plugin-oxlint:
         specifier: 1.67.0
         version: 1.67.0(oxlint-tsgolint@0.23.0)
       eslint-plugin-package-json:
         specifier: 1.2.0
-        version: 1.2.0(@types/estree@1.0.9)(eslint@9.39.4(jiti@2.7.0))
+        version: 1.2.0(@types/estree@1.0.9)(eslint@9.39.4)
       eslint-plugin-yml:
         specifier: 3.4.0
-        version: 3.4.0(eslint@9.39.4(jiti@2.7.0))
+        version: 3.4.0(eslint@9.39.4)
     devDependencies:
       '@eslint/config-inspector':
         specifier: 3.0.4
-        version: 3.0.4(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3)
+        version: 3.0.4(eslint@9.39.4)(typescript@6.0.3)
       '@felixicaza/tsdown-config':
         specifier: workspace:*
         version: link:../tsdown-config
@@ -119,7 +120,7 @@ importers:
     dependencies:
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
-        version: 5.10.0(eslint@9.39.4(jiti@2.7.0))
+        version: 5.10.0(eslint@9.39.4)
       eslint-plugin-jsdoc:
         specifier: 63.0.0
         version: 63.0.0(jiti@2.7.0)
@@ -153,7 +154,7 @@ importers:
         version: 0.5.2(rolldown@1.0.3)
       tsdown-stale-guard:
         specifier: 0.1.2
-        version: 0.1.2(tsdown@0.22.1(typescript@6.0.3))
+        version: 0.1.2(tsdown@0.22.1)
     devDependencies:
       tsdown:
         specifier: 0.22.1
@@ -1208,8 +1209,8 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
-  ansis@4.3.0:
-    resolution: {integrity: sha512-44mvgtPvohuU/70DdY5Oz2AIrLJ9k6/5x4KmoSvPwO+5Moijo0+N9D0fKbbYZQWP1hNm5CpOf+E01jhxG/r8xg==}
+  ansis@4.3.1:
+    resolution: {integrity: sha512-BJ8/l4R5LRE7hW9WdSuGYrLSHi2ynxeFpDFbH0K/CgNeY/tyhk+vO6TYxXC5r5CpUhNVX310xzPsN/H9lCdfOA==}
     engines: {node: '>=14'}
 
   are-docs-informative@0.0.2:
@@ -3674,7 +3675,7 @@ snapshots:
 
   '@es-joy/resolve.exports@1.2.0': {}
 
-  '@eslint-community/eslint-utils@4.9.1(eslint@9.39.4(jiti@2.7.0))':
+  '@eslint-community/eslint-utils@4.9.1(eslint@9.39.4)':
     dependencies:
       eslint: 9.39.4(jiti@2.7.0)
       eslint-visitor-keys: 3.4.3
@@ -3693,9 +3694,9 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
 
-  '@eslint/config-inspector@3.0.4(eslint@9.39.4(jiti@2.7.0))(typescript@6.0.3)':
+  '@eslint/config-inspector@3.0.4(eslint@9.39.4)(typescript@6.0.3)':
     dependencies:
-      ansis: 4.3.0
+      ansis: 4.3.1
       cac: 7.0.0
       chokidar: 5.0.0
       devframe: 0.5.2(typescript@6.0.3)
@@ -4188,9 +4189,9 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@stylistic/eslint-plugin@5.10.0(eslint@9.39.4(jiti@2.7.0))':
+  '@stylistic/eslint-plugin@5.10.0(eslint@9.39.4)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4(jiti@2.7.0))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4)
       '@typescript-eslint/types': 8.60.0
       eslint: 9.39.4(jiti@2.7.0)
       eslint-visitor-keys: 4.2.1
@@ -4244,7 +4245,7 @@ snapshots:
       '@typescript-eslint/types': 8.60.0
       eslint-visitor-keys: 5.0.1
 
-  '@valibot/to-json-schema@1.7.0(valibot@1.4.1(typescript@6.0.3))':
+  '@valibot/to-json-schema@1.7.0(valibot@1.4.1)':
     dependencies:
       valibot: 1.4.1(typescript@6.0.3)
 
@@ -4257,7 +4258,7 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.7(vite@8.0.14(@types/node@25.9.1)(jiti@2.7.0)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.7(vite@8.0.14)':
     dependencies:
       '@vitest/spy': 4.1.7
       estree-walker: 3.0.3
@@ -4332,7 +4333,7 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
-  ansis@4.3.0: {}
+  ansis@4.3.1: {}
 
   are-docs-informative@0.0.2: {}
 
@@ -4702,7 +4703,7 @@ snapshots:
 
   devframe@0.5.2(typescript@6.0.3):
     dependencies:
-      '@valibot/to-json-schema': 1.7.0(valibot@1.4.1(typescript@6.0.3))
+      '@valibot/to-json-schema': 1.7.0(valibot@1.4.1)
       birpc: 4.0.0
       cac: 7.0.0
       h3: 2.0.1-rc.22
@@ -4854,31 +4855,31 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  eslint-compat-utils@0.6.5(eslint@9.39.4(jiti@2.7.0)):
+  eslint-compat-utils@0.6.5(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4(jiti@2.7.0)
       semver: 7.8.1
 
-  eslint-fix-utils@0.4.2(@types/estree@1.0.9)(eslint@9.39.4(jiti@2.7.0)):
+  eslint-fix-utils@0.4.2(@types/estree@1.0.9)(eslint@9.39.4):
     dependencies:
       eslint: 9.39.4(jiti@2.7.0)
     optionalDependencies:
       '@types/estree': 1.0.9
 
-  eslint-json-compat-utils@0.2.3(eslint@9.39.4(jiti@2.7.0))(jsonc-eslint-parser@3.1.0):
+  eslint-json-compat-utils@0.2.3(eslint@9.39.4)(jsonc-eslint-parser@3.1.0):
     dependencies:
       eslint: 9.39.4(jiti@2.7.0)
       esquery: 1.7.0
       jsonc-eslint-parser: 3.1.0
 
-  eslint-plugin-astro@1.7.0(eslint@9.39.4(jiti@2.7.0)):
+  eslint-plugin-astro@1.7.0(eslint@9.39.4):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4(jiti@2.7.0))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4)
       '@jridgewell/sourcemap-codec': 1.5.5
       '@typescript-eslint/types': 8.60.0
       astro-eslint-parser: 1.4.0
       eslint: 9.39.4(jiti@2.7.0)
-      eslint-compat-utils: 0.6.5(eslint@9.39.4(jiti@2.7.0))
+      eslint-compat-utils: 0.6.5(eslint@9.39.4)
       globals: 16.5.0
       postcss: 8.5.15
       postcss-selector-parser: 7.1.1
@@ -4906,22 +4907,22 @@ snapshots:
       - jiti
       - supports-color
 
-  eslint-plugin-jsonc@3.2.0(eslint@9.39.4(jiti@2.7.0)):
+  eslint-plugin-jsonc@3.2.0(eslint@9.39.4):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4(jiti@2.7.0))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4)
       '@eslint/core': 1.2.1
       '@eslint/plugin-kit': 0.7.2
       '@ota-meshi/ast-token-store': 0.3.0
       diff-sequences: 29.6.3
       eslint: 9.39.4(jiti@2.7.0)
-      eslint-json-compat-utils: 0.2.3(eslint@9.39.4(jiti@2.7.0))(jsonc-eslint-parser@3.1.0)
+      eslint-json-compat-utils: 0.2.3(eslint@9.39.4)(jsonc-eslint-parser@3.1.0)
       jsonc-eslint-parser: 3.1.0
       natural-compare: 1.4.0
       synckit: 0.11.13
     transitivePeerDependencies:
       - '@eslint/json'
 
-  eslint-plugin-jsx-a11y@6.10.2(eslint@9.39.4(jiti@2.7.0)):
+  eslint-plugin-jsx-a11y@6.10.2(eslint@9.39.4):
     dependencies:
       aria-query: 5.3.2
       array-includes: 3.1.9
@@ -4948,15 +4949,15 @@ snapshots:
       - oxlint-tsgolint
       - vite-plus
 
-  eslint-plugin-package-json@1.2.0(@types/estree@1.0.9)(eslint@9.39.4(jiti@2.7.0)):
+  eslint-plugin-package-json@1.2.0(@types/estree@1.0.9)(eslint@9.39.4):
     dependencies:
       '@altano/repository-tools': 2.0.3
       change-case: 5.4.4
       detect-indent: 7.0.2
       detect-newline: 4.0.1
       eslint: 9.39.4(jiti@2.7.0)
-      eslint-fix-utils: 0.4.2(@types/estree@1.0.9)(eslint@9.39.4(jiti@2.7.0))
-      eslint-json-compat-utils: 0.2.3(eslint@9.39.4(jiti@2.7.0))(jsonc-eslint-parser@3.1.0)
+      eslint-fix-utils: 0.4.2(@types/estree@1.0.9)(eslint@9.39.4)
+      eslint-json-compat-utils: 0.2.3(eslint@9.39.4)(jsonc-eslint-parser@3.1.0)
       jsonc-eslint-parser: 3.1.0
       package-json-validator: 1.5.2
       semver: 7.8.1
@@ -4965,7 +4966,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/estree'
 
-  eslint-plugin-yml@3.4.0(eslint@9.39.4(jiti@2.7.0)):
+  eslint-plugin-yml@3.4.0(eslint@9.39.4):
     dependencies:
       '@eslint/core': 1.2.1
       '@eslint/plugin-kit': 0.7.2
@@ -4989,7 +4990,7 @@ snapshots:
 
   eslint@9.39.4(jiti@2.7.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4(jiti@2.7.0))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.4)
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.21.2
       '@eslint/config-helpers': 0.4.2
@@ -6590,7 +6591,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  tsdown-stale-guard@0.1.2(tsdown@0.22.1(typescript@6.0.3)):
+  tsdown-stale-guard@0.1.2(tsdown@0.22.1):
     dependencies:
       cac: 7.0.0
       logs-sdk: 0.0.6
@@ -6599,7 +6600,7 @@ snapshots:
 
   tsdown@0.22.1(typescript@6.0.3):
     dependencies:
-      ansis: 4.3.0
+      ansis: 4.3.1
       cac: 7.0.0
       defu: 6.1.7
       empathic: 2.0.1
@@ -6802,7 +6803,7 @@ snapshots:
   vitest@4.1.7(@types/node@25.9.1)(jiti@2.7.0)(yaml@2.9.0):
     dependencies:
       '@vitest/expect': 4.1.7
-      '@vitest/mocker': 4.1.7(vite@8.0.14(@types/node@25.9.1)(jiti@2.7.0)(yaml@2.9.0))
+      '@vitest/mocker': 4.1.7(vite@8.0.14)
       '@vitest/pretty-format': 4.1.7
       '@vitest/runner': 4.1.7
       '@vitest/snapshot': 4.1.7
