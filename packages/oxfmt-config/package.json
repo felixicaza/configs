@@ -1,7 +1,7 @@
 {
   "name": "@felixicaza/oxfmt-config",
   "version": "0.1.2",
-  "description": "Configuración de Oxfmt con opiniones propias para formatear código de manera consistente.",
+  "description": "⚓ Configuración de Oxfmt con opiniones propias para formatear código de manera consistente.",
   "keywords": [
     "oxfmt",
     "oxfmt-config"
@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felixicaza/configs.git"
+    "url": "git+https://github.com/felixicaza/configs.git",
+    "directory": "packages/oxfmt-config"
   },
   "license": "MIT",
   "author": "Felix Icaza <fx.joliett17@gmail.com>",
