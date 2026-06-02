@@ -7,7 +7,6 @@ strictPeerDependencies: true
 strictDepBuilds: true
 dedupePeers: true
 shellEmulator: true
-sharedWorkspaceLockfile: false
 color: always
 
 packages:
