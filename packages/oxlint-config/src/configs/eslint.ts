@@ -125,7 +125,6 @@ const eslintBuiltInRules: DummyRuleMap = {
   'operator-assignment': 'warn',
   'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
   'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
-  'prefer-exponentiation-operator': 'error',
   'prefer-promise-reject-errors': 'error',
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'prefer-rest-params': 'error',
