@@ -53,7 +53,7 @@ describe('index public API', () => {
   })
 
   it('applies user configs at the end with last-write-wins behavior', () => {
-    const userConfig: OxlintConfig = {
+    const userConfig = {
       rules: {
         'no-console': 'error'
       },
@@ -66,7 +66,7 @@ describe('index public API', () => {
           }
         }
       ]
-    }
+    } satisfies OxlintConfig
 
     const result = felixicaza(allDisabled, [userConfig])
 
