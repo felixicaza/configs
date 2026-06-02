@@ -3,7 +3,7 @@
 # 🔨 @felixicaza/tsdown-config
 
 [![npm version](https://img.shields.io/npm/v/@felixicaza/tsdown-config?color=d68e38&logo=npm&logoColor=888888&labelColor=ffffff)](https://npmx.dev/package/@felixicaza/tsdown-config)
-![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=d68e38&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)
+[![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=d68e38&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)](https://github.com/felixicaza/configs/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/felixicaza/configs?color=d68e38&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
 
 Configuración de tsdown con opciones predefinidas para compilaciones de librerías.
