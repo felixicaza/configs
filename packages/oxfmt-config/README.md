@@ -2,9 +2,9 @@
 
 # ⚓ @felixicaza/oxfmt-config
 
-[![npm version](https://img.shields.io/npm/v/@felixicaza/oxfmt-config?color=017d9e&logo=npm&logoColor=888888&labelColor=ffffff)](https://npmx.dev/package/@felixicaza/oxfmt-config)
-![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=017d9e&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)
-[![license](https://img.shields.io/github/license/felixicaza/configs?color=017d9e&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@felixicaza/oxfmt-config?color=017d9f&logo=npm&logoColor=888888&labelColor=ffffff)](https://npmx.dev/package/@felixicaza/oxfmt-config)
+[![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=017d9f&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)](https://github.com/felixicaza/configs/actions/workflows/tests.yml)
+[![license](https://img.shields.io/github/license/felixicaza/configs?color=017d9f&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
 
 Configuración de Oxfmt con opiniones propias para formatear código de manera consistente para HTML, CSS, JavaScript, TypeScript, JSX/TSX, JSON, JSONC, JSON5, YAML, TOML, Markdown, MDX y más.
 
@@ -119,6 +119,12 @@ Para obtener este paquete de manera sencilla y sin el historial de Git por detr�
 
 ```sh
 $ npx giget@latest gh:felixicaza/configs/packages/oxfmt-config oxfmt-config
+```
+
+Remueve el paquete que tiene el prefijo `workspace:*` en las dependencias de desarrollo:
+
+```sh
+$ npm uninstall @felixicaza/tsdown-config
 ```
 
 Instalar las dependencias de desarrollo:
