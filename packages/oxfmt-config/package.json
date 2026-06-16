@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "@felixicaza/tsdown-config": "workspace:*",
-    "oxfmt": "0.52.0",
-    "tinyexec": "1.2.3",
+    "oxfmt": "0.54.0",
+    "tinyexec": "1.2.4",
     "tinyglobby": "0.2.17"
   },
   "peerDependencies": {

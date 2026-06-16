@@ -40,7 +40,7 @@
     "tsdown-stale-guard": "0.1.2"
   },
   "devDependencies": {
-    "tsdown": "0.22.1"
+    "tsdown": "0.22.2"
   },
   "peerDependencies": {
     "tsdown": "^0.22.0"
