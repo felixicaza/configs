@@ -18,8 +18,6 @@ jobs:
 
          - name: Install pnpm
            uses: pnpm/action-setup@v6
-           with:
-              version: latest
 
          - name: Set node
            uses: actions/setup-node@v6
@@ -53,8 +51,6 @@ jobs:
 
          - name: Install pnpm
            uses: pnpm/action-setup@v6
-           with:
-              version: latest
 
          - name: Set node
            uses: actions/setup-node@v6
