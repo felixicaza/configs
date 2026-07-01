@@ -42,7 +42,7 @@
   "devDependencies": {
     "@felixicaza/eslint-config": "workspace:*",
     "@felixicaza/oxlint-config": "workspace:*",
-    "@types/node": "25.9.3",
+    "@types/node": "26.0.1",
     "bumpp": "11.1.0",
     "eslint": "9.39.4",
     "jiti": "2.7.0",
