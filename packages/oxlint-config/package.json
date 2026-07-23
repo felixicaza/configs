@@ -37,9 +37,9 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "5.10.0",
-    "eslint-plugin-jsdoc": "63.0.2",
-    "oxlint-plugin-complexity": "2.1.4",
-    "oxlint-plugin-eslint": "1.69.0",
+    "eslint-plugin-jsdoc": "63.2.0",
+    "oxlint-plugin-complexity": "2.1.6",
+    "oxlint-plugin-eslint": "1.74.0",
     "oxlint-tsgolint": "0.23.0"
   },
   "devDependencies": {
