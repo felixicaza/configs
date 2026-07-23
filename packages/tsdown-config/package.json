@@ -37,10 +37,10 @@
   },
   "dependencies": {
     "rolldown-plugin-dts-minify-lite": "0.5.2",
-    "tsdown-stale-guard": "0.1.2"
+    "tsdown-stale-guard": "0.1.3"
   },
   "devDependencies": {
-    "tsdown": "0.22.2"
+    "tsdown": "0.22.13"
   },
   "peerDependencies": {
     "tsdown": "^0.22.0"
