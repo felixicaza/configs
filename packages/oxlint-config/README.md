@@ -26,7 +26,7 @@ Configuración de Oxlint con opiniones propias para mantener un código limpio y
 Puedes instalar [`@felixicaza/oxlint-config`](https://npmx.dev/package/@felixicaza/oxlint-config) usando npm:
 
 ```sh
-$ npm install oxlint @felixicaza/oxlint-config -D
+$ npm install oxlint oxlint-tsgolint @felixicaza/oxlint-config -D
 ```
 
 <details>
@@ -35,17 +35,17 @@ $ npm install oxlint @felixicaza/oxlint-config -D
 
   Usando pnpm:
   ```sh
-  $ pnpm add oxlint @felixicaza/oxlint-config -D
+  $ pnpm add oxlint oxlint-tsgolint @felixicaza/oxlint-config -D
   ```
 
   Usando yarn:
   ```sh
-  $ yarn add oxlint @felixicaza/oxlint-config -D
+  $ yarn add oxlint oxlint-tsgolint @felixicaza/oxlint-config -D
   ```
 
   Usando bun:
   ```sh
-  $ bun add oxlint @felixicaza/oxlint-config -D
+  $ bun add oxlint oxlint-tsgolint @felixicaza/oxlint-config -D
   ```
 </details>
 
