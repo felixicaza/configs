@@ -10,6 +10,7 @@ export const GLOB_LOCKFILE: string[] = [
   '**/bun.lockb'
 ]
 export const ASTRO_FILES = [
+  '**/.astro',
   '**/*.astro',
   '**/*.astro/*.js',
   '**/*.astro/*.ts'

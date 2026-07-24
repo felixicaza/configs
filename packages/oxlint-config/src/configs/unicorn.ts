@@ -29,6 +29,7 @@ export const unicorn: OxlintConfig = {
     'unicorn/no-console-spaces': 'error',
     'unicorn/no-document-cookie': 'error',
     'unicorn/no-empty-file': 'off',
+    'unicorn/prefer-export-from': 'error',
     'unicorn/no-instanceof-builtins': 'error',
     'unicorn/no-new-array': 'error',
     'unicorn/no-new-buffer': 'error',
@@ -37,6 +38,7 @@ export const unicorn: OxlintConfig = {
     'unicorn/prefer-node-protocol': 'error',
     'unicorn/prefer-number-properties': 'error',
     'unicorn/prefer-query-selector': 'error',
+    'unicorn/prefer-single-call': 'error',
     'unicorn/prefer-string-starts-ends-with': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/throw-new-error': 'error'
