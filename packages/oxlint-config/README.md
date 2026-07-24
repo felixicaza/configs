@@ -10,7 +10,7 @@ Configuración de Oxlint con opiniones propias para mantener un código limpio y
 
 ## ✨ Características
 
-- 🧪 Type checking habilitado por defecto.
+- 🧪 Type-Aware Linting habilitado por defecto.
 - 🚀 Soporte completo para JavaScript y TypeScript.
 - 🔀 Reglas para complejidad ciclomática.
 - 🔍 Reglas nativas y portadas de ESLint.

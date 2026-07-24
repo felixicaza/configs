@@ -17,10 +17,6 @@ function composeTwo(accumulator: OxlintConfig, config: OxlintConfig): OxlintConf
   return {
     ...accumulator,
     ...config,
-    options: {
-      typeAware: true,
-      typeCheck: true
-    },
     rules: mergeObject(accumulator.rules, config.rules),
     env: mergeObject(accumulator.env, config.env),
     globals: mergeObject(accumulator.globals, config.globals),

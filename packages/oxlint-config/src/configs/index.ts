@@ -1,4 +1,5 @@
 export { env } from './env.ts'
+export { typeaware } from './typeaware.ts'
 
 export { stylistic } from './stylistic.ts'
 export { jsdoc } from './jsdoc.ts'
