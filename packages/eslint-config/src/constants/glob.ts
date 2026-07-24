@@ -21,6 +21,7 @@ export const GLOB_EXCLUDE: string[] = [
   '**/tmp',
   '**/.tmp',
   '**/.history',
+  '**/.astro',
   '**/.vitepress/cache',
   '**/.nuxt',
   '**/.next',
