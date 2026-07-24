@@ -3,7 +3,7 @@
 # 🔍 @felixicaza/eslint-config
 
 [![npm version](https://img.shields.io/npm/v/@felixicaza/eslint-config?color=641efc&logo=npm&logoColor=888888&labelColor=ffffff)](https://npmx.dev/package/@felixicaza/eslint-config)
-![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=641efc&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)
+[![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=641efc&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)](https://github.com/felixicaza/configs/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/felixicaza/configs?color=641efc&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
 
 Configuración de ESLint con opiniones propias para Astro, JSON, JSONC, JSON5 y YAML.
@@ -129,6 +129,12 @@ Para obtener este paquete de manera sencilla y sin el historial de Git por detr�
 
 ```sh
 $ npx giget@latest gh:felixicaza/configs/packages/eslint-config eslint-config
+```
+
+Remueve el paquete que tiene el prefijo `workspace:*` en las dependencias de desarrollo:
+
+```sh
+$ npm uninstall @felixicaza/tsdown-config
 ```
 
 Instalar las dependencias de desarrollo:
