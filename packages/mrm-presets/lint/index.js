@@ -1,8 +1,8 @@
 const { lines, yaml, json, packageJson, install } = require('mrm-core')
 
-const oxlintPackages = ['@felixicaza/oxlint-config', 'oxlint']
+const oxlintPackages = ['@felixicaza/oxlint-config', 'oxlint-tsgolint', 'oxlint']
 const precommitsPackages = ['simple-git-hooks', 'nano-staged']
-const eslintPackages = ['@felixicaza/eslint-config', 'eslint@9', 'jiti']
+const eslintPackages = ['@felixicaza/eslint-config', 'eslint@9', 'jiti', '@typescript-eslint/parser']
 
 function task({ precommits, eslintConfig, usingAstro }) {
   lines('oxlint.config.ts')
@@ -15,7 +15,8 @@ function task({ precommits, eslintConfig, usingAstro }) {
 
   packageJson()
     .setScript('linx', 'oxlint .')
-    .setScript('lint:fix', 'oxlint . --fix')
+    .setScript('lint:fix', 'oxlint . --fix --fix-suggestions --fix-dangerously')
+    .setScript('typecheck', 'oxlint . --type-aware --type-check')
     .save()
 
   json('.vscode/extensions.json', {})
