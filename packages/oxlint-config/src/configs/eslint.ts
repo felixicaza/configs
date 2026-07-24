@@ -150,7 +150,12 @@ const eslintBuiltInRules: DummyRuleMap = {
 export const eslint: OxlintConfig = {
   plugins: ['eslint'],
   // Use `import.meta.resolve()` due Oxlint does not resolve the plugin specifier
-  jsPlugins: [import.meta.resolve('oxlint-plugin-eslint')],
+  jsPlugins: [
+    {
+      name: 'eslint-js',
+      specifier: import.meta.resolve('oxlint-plugin-eslint')
+    }
+  ],
   rules: {
     ...eslintBuiltInRules,
     ...eslintPortedRules
