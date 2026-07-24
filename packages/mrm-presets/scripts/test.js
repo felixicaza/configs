@@ -1,35 +1,44 @@
 #!/usr/bin/env node
 
-const fs = require('node:fs')
-const path = require('node:path')
-const { spawnSync } = require('node:child_process')
+const { rm, mkdir } = require('node:fs/promises')
+const { resolve, join } = require('node:path')
+const { spawn } = require('node:child_process')
 
-const interactive = process.argv.includes('--interactive')
+async function main() {
+  const interactive = process.argv.includes('--interactive')
 
-const packageRoot = path.resolve(__dirname, '..')
-const tempDir = path.join(packageRoot, '.temp')
+  const packageRoot = resolve(__dirname, '..')
+  const tempDir = join(packageRoot, '.temp')
 
-fs.rmSync(tempDir, { recursive: true, force: true })
-fs.mkdirSync(tempDir, { recursive: true })
+  await rm(tempDir, { recursive: true, force: true })
+  await mkdir(tempDir, { recursive: true })
 
-const mrmCli = require.resolve('mrm/bin/mrm')
+  const mrmCli = require.resolve('mrm/bin/mrm')
 
-const args = ['all']
+  const args = ['all']
 
-if (interactive) {
-  args.push('-i')
+  if (interactive) {
+    args.push('-i')
+  }
+
+  args.push('--dir', '..')
+
+  const child = spawn(process.execPath, [mrmCli, ...args], {
+    cwd: tempDir,
+    stdio: 'inherit'
+  })
+
+  child.on('error', (err) => {
+    console.error(err)
+    process.exit(1)
+  })
+
+  child.on('close', (code) => {
+    process.exit(code ?? 1)
+  })
 }
 
-args.push('--dir', '..')
-
-const result = spawnSync(process.execPath, [mrmCli, ...args], {
-  cwd: tempDir,
-  stdio: 'inherit'
-})
-
-if (result.error) {
-  console.error(result.error)
+main().catch((err) => {
+  console.error(err)
   process.exit(1)
-}
-
-process.exit(result.status ?? 1)
+})

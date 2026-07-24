@@ -1,4 +1,4 @@
-const { spawnSync } = require('node:child_process')
+const { spawn } = require('node:child_process')
 const { platform } = require('node:process')
 
 const isWindows = platform === 'win32'
@@ -14,31 +14,51 @@ function printGlobalConfigPreview(configs, command) {
   }
 }
 
-function runGlobalConfigs(configs, command) {
-  return configs.reduce((failed, [key, value]) => {
-    const args = ['config', 'set', key, value]
-    const cmdText = `${command} ${args.join(' ')}`
+function runCommand(command, args) {
+  return new Promise((resolve) => {
+    const child = spawn(command, args, {
+      stdio: 'inherit',
+      shell: isWindows,
+      windowsHide: true
+    })
 
-    try {
-      const result = spawnSync(command, args, {
-        stdio: 'inherit',
-        shell: isWindows,
-        windowsHide: true
+    child.on('error', (error) => {
+      resolve({
+        success: false,
+        error
       })
+    })
 
-      if (result.error || result.status !== 0) {
-        failed.push(cmdText)
+    child.on('close', (code) => {
+      resolve({
+        success: code === 0,
+        code
+      })
+    })
+  })
+}
+
+async function runGlobalConfigs(configs, command) {
+  const results = await Promise.all(
+    configs.map(async([key, value]) => {
+      const args = ['config', 'set', key, value]
+      const cmdText = `${command} ${args.join(' ')}`
+
+      const result = await runCommand(command, args)
+
+      if (!result.success) {
         if (result.error) {
           console.error(`[error] ${result.error.message}`)
         }
-      }
-    } catch(error) {
-      failed.push(cmdText)
-      console.error(`[error] ${error.message}`)
-    }
 
-    return failed
-  }, [])
+        return cmdText
+      }
+
+      return null
+    })
+  )
+
+  return results.filter(Boolean)
 }
 
 function reportGlobalConfigResult(failedCommands, command) {
@@ -54,9 +74,9 @@ function reportGlobalConfigResult(failedCommands, command) {
   }
 }
 
-function applyGlobalConfigs(configs, command) {
+async function applyGlobalConfigs(configs, command) {
   printGlobalConfigPreview(configs, command)
-  const failedCommands = runGlobalConfigs(configs, command)
+  const failedCommands = await runGlobalConfigs(configs, command)
   reportGlobalConfigResult(failedCommands, command)
 }
 
