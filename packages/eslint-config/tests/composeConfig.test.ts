@@ -70,4 +70,46 @@ describe('utils/composeConfig', () => {
       }
     ])
   })
+
+  it('skips undefined configs without crashing', () => {
+    expect(() =>
+      composeConfig(
+        undefined as unknown as Linter.Config,
+        {
+          name: 'global-ignores',
+          ignores: ['**/dist']
+        },
+        {
+          rules: {
+            semi: 'error'
+          }
+        }
+      )
+    ).not.toThrow()
+
+    const result = composeConfig(
+      undefined as unknown as Linter.Config,
+      {
+        name: 'global-ignores',
+        ignores: ['**/dist']
+      },
+      {
+        rules: {
+          semi: 'error'
+        }
+      }
+    )
+
+    expect(result).toEqual([
+      {
+        name: 'global-ignores',
+        ignores: ['**/dist']
+      },
+      {
+        rules: {
+          semi: 'error'
+        }
+      }
+    ])
+  })
 })

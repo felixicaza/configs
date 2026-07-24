@@ -1,14 +1,13 @@
 import type { Linter } from 'eslint'
 import type { Options, PresetMap, PresetName } from '../types/index.ts'
 
-import { astro, disables, json, packageJson, yaml } from '../configs/index.ts'
+import { astro, json, packageJson, yaml } from '../configs/index.ts'
 
 const presetEntries = [
   ['astro', astro],
   ['json', json],
   ['packageJson', packageJson],
-  ['yaml', yaml],
-  ['disables', disables]
+  ['yaml', yaml]
 ] as const
 
 export function selectPresetConfigs(options: Required<Options>): Linter.Config[] {

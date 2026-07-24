@@ -14,8 +14,7 @@ const allDisabled: Required<Options> = {
   astro: false,
   json: false,
   packageJson: false,
-  yaml: false,
-  disables: false
+  yaml: false
 }
 
 describe('index public API', () => {

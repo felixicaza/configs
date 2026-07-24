@@ -35,8 +35,7 @@ runWithConfig('default', {})
 runWithConfig('astro-only', {
   json: false,
   packageJson: false,
-  yaml: false,
-  disables: false
+  yaml: false
 })
 
 runWithConfig(

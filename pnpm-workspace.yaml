@@ -19,9 +19,6 @@ packageExtensions:
    "eslint-plugin-jsdoc@*":
       dependencies:
          "eslint": "*"
-   "eslint-plugin-oxlint@*":
-      dependencies:
-         "oxlint": "*"
 
 trustPolicyExclude:
    - "mrm-core@7.1.22"
