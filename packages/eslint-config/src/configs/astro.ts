@@ -19,12 +19,6 @@ export const astro: Linter.Config[] = [
       'astro/no-unused-define-vars-in-style': 'error',
       'astro/valid-compile': 'error',
       'astro/no-prerender-export-outside-pages': 'error',
-      'astro/no-unsafe-inline-scripts': ['error', {
-        allowDefineVars: false,
-        allowModuleScripts: false,
-        allowNonExecutingTypes: ['application/ld+json', 'application/json'],
-        allowNonce: false
-      }],
       'astro/no-unused-css-selector': 'error',
       'astro/prefer-class-list-directive': 'error',
       'astro/prefer-object-class-list': 'error',
