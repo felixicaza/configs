@@ -43,7 +43,7 @@
     "@felixicaza/eslint-config": "workspace:*",
     "@felixicaza/oxlint-config": "workspace:*",
     "@types/node": "26.1.1",
-    "bumpp": "11.1.0",
+    "bumpp": "12.1.1",
     "eslint": "9.39.5",
     "jiti": "2.7.0",
     "nano-staged": "1.0.2",
