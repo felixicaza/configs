@@ -33,6 +33,7 @@ export const GLOB_EXCLUDE: string[] = [
   '**/.next',
   '**/.svelte-kit',
   '**/.vercel',
+  '**/.turbo',
   '**/.changeset',
   '**/.idea',
   '**/.cache',
