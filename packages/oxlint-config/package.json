@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "5.10.0",
-    "eslint-plugin-jsdoc": "63.2.0",
+    "eslint-plugin-jsdoc": "64.1.0",
     "oxlint-plugin-complexity": "2.1.6",
     "oxlint-plugin-eslint": "1.75.0"
   },
