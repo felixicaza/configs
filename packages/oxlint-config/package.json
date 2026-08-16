@@ -38,13 +38,13 @@
   "dependencies": {
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-jsdoc": "63.2.0",
-    "oxlint-plugin-complexity": "2.1.6",
-    "oxlint-plugin-eslint": "1.75.0"
+    "oxlint-plugin-complexity": "2.1.7",
+    "oxlint-plugin-eslint": "1.78.0"
   },
   "devDependencies": {
     "@felixicaza/tsdown-config": "workspace:*",
-    "oxlint": "1.76.0",
-    "tinyexec": "1.2.4",
+    "oxlint": "1.78.0",
+    "tinyexec": "1.3.0",
     "tinyglobby": "0.2.17"
   },
   "peerDependencies": {
