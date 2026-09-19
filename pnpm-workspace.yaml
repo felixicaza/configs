@@ -13,15 +13,18 @@ packages:
    - "packages/*"
 
 packageExtensions:
-   "oxlint-plugin-complexity@*":
-      dependencies:
-         "@oxlint/plugins": "*"
    "eslint-plugin-jsdoc@*":
       dependencies:
          "eslint": "*"
+   "vitest@*":
+      dependencies:
+         "vite": "*"
+   "@napi-rs/wasm-runtime@*":
+      dependencies:
+         "@emnapi/core": "*"
+         "@emnapi/runtime": "*"
 
 trustPolicyExclude:
-   - "mrm-core@7.1.22"
    - "semver@6.3.1 || 5.7.2"
 
 minimumReleaseAgeExclude:
