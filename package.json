@@ -42,17 +42,17 @@
   "devDependencies": {
     "@felixicaza/eslint-config": "workspace:*",
     "@felixicaza/oxlint-config": "workspace:*",
-    "@types/node": "26.1.2",
-    "bumpp": "12.1.1",
+    "@types/node": "26.6.1",
+    "bumpp": "12.3.0",
     "eslint": "9.39.5",
     "jiti": "2.7.0",
     "nano-staged": "1.0.2",
-    "oxlint": "1.76.0",
+    "oxlint": "1.83.0",
     "oxlint-tsgolint": "7.0.2001",
-    "simple-git-hooks": "2.13.1",
-    "tsdown": "0.22.14",
+    "simple-git-hooks": "2.14.0",
+    "tsdown": "0.23.0",
     "typescript": "6.0.3",
-    "vitest": "4.1.10"
+    "vitest": "5.0.1"
   },
   "devEngines": {
     "packageManager": {
