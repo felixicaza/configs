@@ -15,10 +15,10 @@ packages:
 packageExtensions:
    "eslint-plugin-jsdoc@*":
       dependencies:
-         "eslint": "*"
+         eslint: "*"
    "vitest@*":
       dependencies:
-         "vite": "*"
+         vite: "*"
    "@napi-rs/wasm-runtime@*":
       dependencies:
          "@emnapi/core": "*"

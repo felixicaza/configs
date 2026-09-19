@@ -1,50 +1,50 @@
 version: 2
 
 updates:
-   - package-ecosystem: "npm"
-     directory: "/"
+   - package-ecosystem: npm
+     directory: /
      open-pull-requests-limit: 15
-     target-branch: "main"
+     target-branch: main
      assignees:
-        - "felixicaza"
+        - felixicaza
      labels:
-        - "dependencies"
+        - dependencies
      commit-message:
-        prefix: "chore(deps)"
+        prefix: chore(deps)
      schedule:
-        interval: "cron"
+        interval: cron
         cronjob: "0 0 1,16 * *"
-        timezone: "America/Costa_Rica"
+        timezone: America/Costa_Rica
      ignore:
-        - dependency-name: "eslint"
+        - dependency-name: eslint
           update-types: ["version-update:semver-major"]
      groups:
         dependencies:
            patterns:
               - "*"
            update-types:
-              - "minor"
-              - "patch"
+              - minor
+              - patch
 
    # github-actions
-   - package-ecosystem: "github-actions"
-     directory: "/"
+   - package-ecosystem: github-actions
+     directory: /
      open-pull-requests-limit: 15
-     target-branch: "main"
+     target-branch: main
      assignees:
-        - "felixicaza"
+        - felixicaza
      labels:
-        - "actions"
+        - actions
      commit-message:
-        prefix: "chore(actions)"
+        prefix: chore(actions)
      schedule:
-        interval: "monthly"
-        day: "friday"
+        interval: monthly
+        day: friday
         time: "00:00"
-        timezone: "America/Costa_Rica"
+        timezone: America/Costa_Rica
      groups:
         dependencies:
            patterns:
               - "*"
            update-types:
-              - "major"
+              - major
