@@ -44,6 +44,7 @@
     "eslint-plugin-jsonc": "3.4.2",
     "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-package-json": "1.8.1",
+    "eslint-plugin-pnpm": "1.9.1",
     "eslint-plugin-yml": "3.8.1"
   },
   "devDependencies": {

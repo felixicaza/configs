@@ -14,6 +14,7 @@ const allDisabled: Required<Options> = {
   astro: false,
   json: false,
   packageJson: false,
+  pnpm: false,
   yaml: false
 }
 

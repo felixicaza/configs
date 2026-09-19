@@ -9,6 +9,7 @@ describe('utils/selectPresetConfigs', () => {
       astro: false,
       json: false,
       packageJson: false,
+      pnpm: false,
       yaml: false
     })
 
@@ -20,6 +21,7 @@ describe('utils/selectPresetConfigs', () => {
       astro: true,
       json: false,
       packageJson: false,
+      pnpm: false,
       yaml: false
     })
 
@@ -31,10 +33,11 @@ describe('utils/selectPresetConfigs', () => {
       astro: false,
       json: true,
       packageJson: true,
+      pnpm: false,
       yaml: false
     })
 
-    expect(result).toEqual([...json, ...packageJson])
+    expect(result).toEqual([...json, packageJson])
   })
 
   it('selects all presets in declaration order when all are enabled', () => {
@@ -42,9 +45,10 @@ describe('utils/selectPresetConfigs', () => {
       astro: true,
       json: true,
       packageJson: true,
+      pnpm: false,
       yaml: true
     })
 
-    expect(result).toEqual([...astro, ...json, ...packageJson, ...yaml])
+    expect(result).toEqual([...astro, ...json, packageJson, ...yaml])
   })
 })
