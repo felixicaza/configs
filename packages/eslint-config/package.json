@@ -38,6 +38,7 @@
     "inspect:build": "pnpm build && eslint-config-inspector build --config ./tests/eslint.config.inspect.ts"
   },
   "dependencies": {
+    "@santi020k/eslint-plugin-astro-doctor": "1.3.2",
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-jsonc": "3.4.2",

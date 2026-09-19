@@ -1,11 +1,11 @@
 import type { Linter } from 'eslint'
 
 import { configs as configAstro } from 'eslint-plugin-astro'
+import astroDoctorPlugin from '@santi020k/eslint-plugin-astro-doctor'
 import stylistic from '@stylistic/eslint-plugin'
 
 export const astro: Linter.Config[] = [
-  ...configAstro['flat/recommended'],
-  ...configAstro['flat/jsx-a11y-recommended'],
+  ...configAstro.base,
   {
     name: 'felixicaza/astro',
     files: ['**/*.astro'],
@@ -16,14 +16,14 @@ export const astro: Linter.Config[] = [
       'astro/no-deprecated-astro-fetchcontent': 'error',
       'astro/no-deprecated-astro-resolve': 'error',
       'astro/no-deprecated-getentrybyslug': 'error',
-      'astro/no-unused-define-vars-in-style': 'error',
-      'astro/valid-compile': 'error',
       'astro/no-prerender-export-outside-pages': 'error',
       'astro/no-unused-css-selector': 'error',
+      'astro/no-unused-define-vars-in-style': 'error',
       'astro/prefer-class-list-directive': 'error',
       'astro/prefer-object-class-list': 'error',
       'astro/prefer-split-class-list': ['error', { splitLiteral: true }],
       'astro/sort-attributes': ['error', { type: 'alphabetical', order: 'asc', ignoreCase: true }],
+      'astro/valid-compile': 'error',
 
       'astro/jsx-a11y/alt-text': 'error',
       'astro/jsx-a11y/anchor-ambiguous-text': 'error',
@@ -51,6 +51,25 @@ export const astro: Linter.Config[] = [
       'astro/jsx-a11y/prefer-tag-over-role': 'error',
       'astro/jsx-a11y/role-has-required-aria-props': 'error',
       'astro/jsx-a11y/role-supports-aria-props': 'error'
+    }
+  },
+  {
+    name: 'felixicaza/astro/doctor',
+    files: ['**/*.astro'],
+    plugins: {
+      'astro-doctor': astroDoctorPlugin
+    },
+    rules: {
+      'astro-doctor/no-blocking-script': 'error',
+      'astro-doctor/no-client-load-overuse': 'error',
+      'astro-doctor/no-process-env': 'error',
+      'astro-doctor/no-public-secret-env': 'error',
+      'astro-doctor/no-unprocessed-script-surprises': 'error',
+      'astro-doctor/prefer-content-collections': 'error',
+      // 'astro-doctor/prefer-env-schema': 'warn', // Invalid rule
+      // 'astro-doctor/require-action-input-schema': 'error', // Invalid rule
+      'astro-doctor/require-island-fallback': 'error',
+      'astro-doctor/use-astro-image': 'error'
     }
   },
   {
