@@ -41,7 +41,7 @@
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-jsonc": "3.4.2",
-    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-package-json": "1.8.1",
     "eslint-plugin-yml": "3.8.1"
   },
