@@ -38,9 +38,12 @@
     "inspect:build": "pnpm build && eslint-config-inspector build --config ./tests/eslint.config.inspect.ts"
   },
   "dependencies": {
+    "@eslint/css": "2.0.0",
     "@santi020k/eslint-plugin-astro-doctor": "1.3.2",
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-astro": "3.2.1",
+    "eslint-plugin-css-properties-order": "0.0.1",
+    "eslint-plugin-css-stylistic": "0.0.2",
     "eslint-plugin-jsonc": "3.4.2",
     "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-package-json": "1.8.1",

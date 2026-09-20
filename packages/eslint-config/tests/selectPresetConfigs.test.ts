@@ -7,6 +7,7 @@ describe('utils/selectPresetConfigs', () => {
   it('returns empty list when all presets are disabled', () => {
     const result = selectPresetConfigs({
       astro: false,
+      css: false,
       json: false,
       packageJson: false,
       pnpm: false,
@@ -19,6 +20,7 @@ describe('utils/selectPresetConfigs', () => {
   it('selects only astro preset when astro is enabled', () => {
     const result = selectPresetConfigs({
       astro: true,
+      css: false,
       json: false,
       packageJson: false,
       pnpm: false,
@@ -31,6 +33,7 @@ describe('utils/selectPresetConfigs', () => {
   it('selects only json and packageJson presets when json and packageJson are enabled', () => {
     const result = selectPresetConfigs({
       astro: false,
+      css: false,
       json: true,
       packageJson: true,
       pnpm: false,
@@ -43,6 +46,7 @@ describe('utils/selectPresetConfigs', () => {
   it('selects all presets in declaration order when all are enabled', () => {
     const result = selectPresetConfigs({
       astro: true,
+      css: false,
       json: true,
       packageJson: true,
       pnpm: false,

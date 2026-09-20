@@ -12,6 +12,7 @@ function findNamedConfig(configs: Linter.Config[], name: string): Linter.Config 
 
 const allDisabled: Required<Options> = {
   astro: false,
+  css: false,
   json: false,
   packageJson: false,
   pnpm: false,

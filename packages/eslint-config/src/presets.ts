@@ -1,13 +1,14 @@
 import type { Linter } from 'eslint'
 import type { Options, PresetName } from './types/index.ts'
 
-import { astro, json, packageJson, pnpm, yaml } from './configs/index.ts'
+import { astro, css, json, packageJson, pnpm, yaml } from './configs/index.ts'
 
 type ResolvedOptions = Required<Options>
 type PresetFactory = (options: ResolvedOptions) => Linter.Config[]
 
 export const presetEntries: readonly [PresetName, PresetFactory][] = [
   ['astro', () => astro],
+  ['css', () => css],
   ['json', () => json],
   [
     'packageJson',
@@ -19,6 +20,7 @@ export const presetEntries: readonly [PresetName, PresetFactory][] = [
 
 export const defaultOptions: ResolvedOptions = {
   astro: true,
+  css: true,
   json: true,
   packageJson: {},
   pnpm: false,
