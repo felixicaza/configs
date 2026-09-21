@@ -58,8 +58,8 @@ export const typescript: OxlintConfig = {
         'typescript/no-wrapper-object-types': 'error',
         'typescript/require-await': 'error',
         'typescript/triple-slash-reference': 'off',
-        'typescript/unified-signatures': 'off'
-        // 'typescript/method-signature-style': ['error', 'property'],
+        'typescript/unified-signatures': 'off',
+        'typescript/method-signature-style': ['error', 'property']
       }
     }
   ]

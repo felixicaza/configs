@@ -19,6 +19,7 @@ export const jsdoc: OxlintConfig = {
     'jsdoc/empty-tags': 'warn',
     'jsdoc/implements-on-classes': 'warn',
     'jsdoc/no-defaults': 'warn',
+    'jsdoc/no-blank-blocks': 'error',
     'jsdoc/require-param-name': 'warn',
     'jsdoc/require-property': 'warn',
     'jsdoc/require-property-description': 'warn',

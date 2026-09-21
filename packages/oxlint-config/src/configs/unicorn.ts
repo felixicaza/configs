@@ -23,12 +23,16 @@ export const unicorn: OxlintConfig = {
         ignore: [/^[A-Z]+\..*$/]
       }
     ],
+    'unicorn/import-style': ['error', { checkExportFrom: true }],
+    'unicorn/max-nested-calls': 'error',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'warn',
     'unicorn/no-accessor-recursion': 'warn',
     'unicorn/no-console-spaces': 'error',
     'unicorn/no-document-cookie': 'error',
     'unicorn/no-empty-file': 'off',
+    'unicorn/prefer-number-coercion': 'error',
+    'unicorn/no-confusing-array-with': 'error',
     'unicorn/prefer-export-from': 'error',
     'unicorn/no-instanceof-builtins': 'error',
     'unicorn/no-new-array': 'error',
