@@ -2,6 +2,7 @@ import type { OxlintConfig } from 'oxlint'
 import type { Options, PresetName } from './types/index.ts'
 
 import {
+  noCommentSlop,
   stylistic,
   jsdoc,
   e18e,
@@ -20,6 +21,7 @@ type ResolvedOptions = Required<Options>
 type PresetFactory = (options: ResolvedOptions) => OxlintConfig[]
 
 export const presetEntries: readonly [PresetName, PresetFactory][] = [
+  ['noCommentSlop', () => [noCommentSlop]],
   ['stylistic', () => [stylistic]],
   ['jsdoc', () => [jsdoc]],
   ['e18e', () => [e18e]],
@@ -40,6 +42,7 @@ export const presetEntries: readonly [PresetName, PresetFactory][] = [
 ]
 
 export const defaultOptions: Required<Options> = {
+  noCommentSlop: true,
   stylistic: true,
   jsdoc: true,
   e18e: true,

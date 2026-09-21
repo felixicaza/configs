@@ -1,6 +1,7 @@
 export { env } from './env.ts'
 export { typeaware } from './typeaware.ts'
 
+export { noCommentSlop } from './no-comment-slop.ts'
 export { stylistic } from './stylistic.ts'
 export { jsdoc } from './jsdoc.ts'
 export { e18e } from './e18e.ts'

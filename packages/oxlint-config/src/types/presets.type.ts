@@ -3,7 +3,8 @@ import type { DummyRule, OxlintConfig } from 'oxlint'
 type BooleanPresetName = Exclude<PresetName, 'importIntegrity'>
 
 export type PresetName =
-  | 'stylistic' |
+  | 'noCommentSlop' |
+  'stylistic' |
   'jsdoc' |
   'e18e' |
   'complexity' |
