@@ -67,7 +67,7 @@ export const stylistic: OxlintConfig = {
     '@stylistic/no-whitespace-before-property': 'error',
     '@stylistic/object-curly-newline': ['error', { multiline: true, consistent: true }],
     '@stylistic/object-curly-spacing': ['error', 'always'],
-    '@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
+    '@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before', '|': 'before' } }],
     '@stylistic/padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
     '@stylistic/quote-props': ['error', 'as-needed'],
     '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'never' }],

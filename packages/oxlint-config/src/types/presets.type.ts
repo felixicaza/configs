@@ -29,17 +29,17 @@ export type UserConfig = Omit<OxlintConfig, 'rules' | 'extends' | 'ignorePattern
 }
 
 export type PresetName =
-  'antiSlop' |
-  'noCommentSlop' |
-  'stylistic' |
-  'jsdoc' |
-  'e18e' |
-  'complexity' |
-  'imports' |
-  'importIntegrity' |
-  'promise' |
-  'node' |
-  'eslint' |
-  'oxc' |
-  'typescript' |
-  'vitest'
+  | 'antiSlop'
+  | 'noCommentSlop'
+  | 'stylistic'
+  | 'jsdoc'
+  | 'e18e'
+  | 'complexity'
+  | 'imports'
+  | 'importIntegrity'
+  | 'promise'
+  | 'node'
+  | 'eslint'
+  | 'oxc'
+  | 'typescript'
+  | 'vitest'
