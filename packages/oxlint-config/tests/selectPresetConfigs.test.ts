@@ -1,15 +1,34 @@
 import { describe, expect, it } from 'vitest'
 
-import { complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript, vitest } from '../src/configs/index.ts'
+import {
+  antiSlop,
+  complexity,
+  e18e,
+  eslint,
+  importIntegrity,
+  imports,
+  jsdoc,
+  noCommentSlop,
+  node,
+  oxc,
+  promise,
+  stylistic,
+  typescript,
+  vitest
+} from '../src/configs/index.ts'
 import { selectPresetConfigs } from '../src/utils/selectPresetConfigs.ts'
 
 describe('utils/selectPresetConfigs', () => {
   it('returns empty list when all presets are disabled', () => {
     const result = selectPresetConfigs({
+      antiSlop: false,
       complexity: false,
+      e18e: false,
       eslint: false,
+      importIntegrity: false,
       imports: false,
       jsdoc: false,
+      noCommentSlop: false,
       node: false,
       oxc: false,
       promise: false,
@@ -23,10 +42,14 @@ describe('utils/selectPresetConfigs', () => {
 
   it('selects only complexity preset when complexity is enabled', () => {
     const result = selectPresetConfigs({
+      antiSlop: false,
       complexity: true,
+      e18e: false,
       eslint: false,
+      importIntegrity: false,
       imports: false,
       jsdoc: false,
+      noCommentSlop: false,
       node: false,
       oxc: false,
       promise: false,
@@ -40,10 +63,14 @@ describe('utils/selectPresetConfigs', () => {
 
   it('selects only eslint and jsdoc presets when eslint and jsdoc are enabled', () => {
     const result = selectPresetConfigs({
+      antiSlop: false,
       complexity: false,
+      e18e: false,
       eslint: true,
+      importIntegrity: false,
       imports: false,
       jsdoc: true,
+      noCommentSlop: false,
       node: false,
       oxc: false,
       promise: false,
@@ -52,15 +79,19 @@ describe('utils/selectPresetConfigs', () => {
       vitest: false
     })
 
-    expect(result).toEqual([eslint, jsdoc])
+    expect(result).toEqual([jsdoc, eslint])
   })
 
   it('selects all presets in declaration order when all are enabled', () => {
     const result = selectPresetConfigs({
+      antiSlop: true,
       complexity: true,
+      e18e: true,
       eslint: true,
+      importIntegrity: true,
       imports: true,
       jsdoc: true,
+      noCommentSlop: true,
       node: true,
       oxc: true,
       promise: true,
@@ -69,6 +100,21 @@ describe('utils/selectPresetConfigs', () => {
       vitest: true
     })
 
-    expect(result).toEqual([complexity, eslint, imports, jsdoc, node, oxc, promise, stylistic, typescript, vitest])
+    expect(result).toEqual([
+      antiSlop,
+      noCommentSlop,
+      stylistic,
+      jsdoc,
+      e18e,
+      complexity,
+      imports,
+      importIntegrity(),
+      promise,
+      node,
+      eslint,
+      oxc,
+      typescript,
+      vitest
+    ])
   })
 })

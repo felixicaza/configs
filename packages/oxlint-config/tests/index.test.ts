@@ -8,9 +8,13 @@ import { env as expectedEnv } from '../src/configs/env.ts'
 import { GLOB_EXCLUDE } from '../src/constants/glob.ts'
 
 const allDisabled: Required<Options> = {
+  antiSlop: false,
+  noCommentSlop: false,
   complexity: false,
   eslint: false,
+  e18e: false,
   imports: false,
+  importIntegrity: false,
   jsdoc: false,
   node: false,
   oxc: false,
