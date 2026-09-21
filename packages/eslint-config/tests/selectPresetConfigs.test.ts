@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { astro, json, packageJson, yaml } from '../src/configs/index.ts'
+import { astro, css, json, packageJson, pnpm, yaml } from '../src/configs/index.ts'
 import { selectPresetConfigs } from '../src/utils/selectPresetConfigs.ts'
 
 describe('utils/selectPresetConfigs', () => {
@@ -40,19 +40,19 @@ describe('utils/selectPresetConfigs', () => {
       yaml: false
     })
 
-    expect(result).toEqual([...json, packageJson])
+    expect(result).toEqual([...json, ...packageJson()])
   })
 
   it('selects all presets in declaration order when all are enabled', () => {
     const result = selectPresetConfigs({
       astro: true,
-      css: false,
+      css: true,
       json: true,
       packageJson: true,
-      pnpm: false,
+      pnpm: true,
       yaml: true
     })
 
-    expect(result).toEqual([...astro, ...json, packageJson, ...yaml])
+    expect(result).toEqual([...astro, ...css, ...json, ...packageJson(), ...pnpm, ...yaml])
   })
 })

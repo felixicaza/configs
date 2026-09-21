@@ -1,0 +1,60 @@
+@import "a.css";
+
+@media screen and (min-width: 768px) {
+  .foo,
+  #app[data-theme="dark"]:hover {
+    display: grid;
+    grid-template-areas:
+      "header  header"
+      "sidebar main";
+    padding: 0 10px;
+    margin: 0px 10px;
+    font-family: "Inter", sans-serif;
+    color: #ff0000
+  }
+}
+
+/* eslint-disable-next-line css/no-empty-blocks */
+.empty {}
+
+#app {
+  #nested {
+    inline-size: 100px;
+    block-size: 200px;
+    margin-inline-start: 10px;
+    margin-inline-end: 20px
+  }
+}
+
+/* eslint-disable-next-line css/selector-complexity */
+#main #nested {
+  aspect-ratio: 1;
+  background: dodgerblue;
+  background-size: 100px
+}
+
+.foo,
+.bar {
+  padding: 10px 20px;
+  color: rgb(255, 0, 0)
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(100px, 10px)
+  }
+  to {
+    transform: translateX(100px)
+  }
+}
+
+.invalid {
+  /* eslint-disable-next-line css/no-invalid-properties */
+  unknown-property: something;
+  background-color: #aabbcc;
+  opacity: 0.5;
+  transform: translate(10px, 20px)
+}

@@ -19,5 +19,11 @@
 
   "[yaml]": {
     "editor.tabSize": 3
-  }
+  },
+
+  "css.lint.emptyRules": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "colorize.exclude": [
+    "**/.css"
+  ]
 }

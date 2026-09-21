@@ -3,28 +3,26 @@
 root:
    child: value
    child2:
-      subchild : "subvalue"
+      subchild: subvalue
       anotherChild:
          enabled: true
-         count : 42
+         count: 42
          tags:
             - one
             - two
             - three
 
-   child3 :
-      nestedList :
+   child3:
+      nestedList:
          - name: Alice
            age: 30
-         - name : Bob
-           age : 25
-         -
-           name: Charlie
-           age:
-              35
+         - name: Bob
+           age: 25
+         - name: Charlie
+           age: 35
 
 misc:
-   weirdBoolean : yes
+   weirdBoolean: yes
    weirdNumber: 0xFF
    multiline: |
       this is a multiline
@@ -32,10 +30,10 @@ misc:
       with ugly spacing
 
 settings:
-   theme : dark
+   theme: dark
    notifications:
-      email : true
+      email: true
       push: false
    retries:
-      max : 5
-      delay : 2000
+      max: 5
+      delay: 2000

@@ -33,6 +33,7 @@ afterAll(async(): Promise<void> => {
 runWithConfig('default', {})
 
 runWithConfig('astro-only', {
+  css: false,
   json: false,
   packageJson: false,
   yaml: false

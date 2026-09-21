@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 const title = 'Demo'
 const items = ['uno', 'dos'];
 ---
@@ -8,7 +10,7 @@ const items = ['uno', 'dos'];
     <title>{title}</title>
   </head>
   <body>
-    <img src="/logo.png" alt="logo of company" class="b a" id="hero" />
+    <Image src="/logo.png" alt="logo of company" class="b a" id="hero" />
     <a href="/blog">see more posts</a>
     <ul>{items.map(item => <li>{item}</li>)}</ul>
   </body>
