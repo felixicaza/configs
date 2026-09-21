@@ -3,6 +3,7 @@ export { typeaware } from './typeaware.ts'
 
 export { stylistic } from './stylistic.ts'
 export { jsdoc } from './jsdoc.ts'
+export { e18e } from './e18e.ts'
 export { complexity } from './complexity.ts'
 export { imports } from './imports.ts'
 export { promise } from './promise.ts'

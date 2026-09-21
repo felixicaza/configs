@@ -329,6 +329,9 @@ importers:
 
   packages/oxlint-config:
     dependencies:
+      '@e18e/eslint-plugin':
+        specifier: 0.8.1
+        version: 0.8.1(eslint@9.39.5)(oxlint@1.83.0)
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
         version: 5.10.0(eslint@9.39.5)
@@ -454,6 +457,17 @@ packages:
     resolution: {integrity: sha512-NlMXWCd3mksT12Qt3hGfvYHbTTl2oAnvYl5HYLpmmW2XjHR3xgKQF9UBn627ZxukxoswN78DdrmzB7gN0M7G3Q==}
     peerDependencies:
       devframe: 1.0.0
+
+  '@e18e/eslint-plugin@0.8.1':
+    resolution: {integrity: sha512-OV3T7l0r52/IglskdAuoO+BJyzsCs7AcIHpwpBMlIMO0+3RHskM2h5MuHdLuesIhSRhwCURGMKtp/XwnfXrfxg==}
+    peerDependencies:
+      eslint: ^9.0.0 || ^10.0.0
+      oxlint: ^1.72.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+      oxlint:
+        optional: true
 
   '@emnapi/core@1.9.2':
     resolution: {integrity: sha512-UC+ZhH3XtczQYfOlu3lNEkdW/p4dsJ1r/bP7H8+rhao3TTTMO1ATq/4DdIi23XuGoFY+Cz0JmCbdVl0hz9jZcA==}
@@ -2661,6 +2675,9 @@ packages:
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
+  module-replacements@3.3.0:
+    resolution: {integrity: sha512-AVZL23uePazQOZlb/QMGwxsUa1oWA62Cfe6ApPzgasUoF4cdCWAiRPVq4KkaQzXbIDAlpLhLG61Jx8Lju4wjTg==}
+
   mrm-core@7.1.22:
     resolution: {integrity: sha512-ZuJBEatzjyvA6+5Ogl02QbV70UNbe2jaxa29NzcL3g5VT7rHAMtE0v+vGOZkcmdl3ZtUDEq0BMj4qXgw8uSCXg==}
     engines: {node: '>=10.13'}
@@ -3791,6 +3808,15 @@ snapshots:
     transitivePeerDependencies:
       - crossws
       - ocache
+
+  '@e18e/eslint-plugin@0.8.1(eslint@9.39.5)(oxlint@1.83.0)':
+    dependencies:
+      empathic: 2.1.0
+      module-replacements: 3.3.0
+      verkit: 0.4.1
+    optionalDependencies:
+      eslint: 9.39.5(jiti@2.7.0)
+      oxlint: 1.83.0(oxlint-tsgolint@7.0.2002)
 
   '@emnapi/core@1.9.2':
     dependencies:
@@ -5696,6 +5722,8 @@ snapshots:
       brace-expansion: 1.1.21
 
   minimist@1.2.8: {}
+
+  module-replacements@3.3.0: {}
 
   mrm-core@7.1.22:
     dependencies:

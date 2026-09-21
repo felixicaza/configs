@@ -36,6 +36,7 @@
     "dev": "tsdown --watch"
   },
   "dependencies": {
+    "@e18e/eslint-plugin": "0.8.1",
     "@stylistic/eslint-plugin": "5.10.0",
     "eslint-plugin-jsdoc": "64.5.3",
     "oxlint-plugin-complexity": "3.0.0",
