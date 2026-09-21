@@ -1,9 +1,29 @@
-import type { OxlintConfig, DummyRule } from 'oxlint'
-import type { presetEntries } from '../presets.ts'
+import type { DummyRule, OxlintConfig } from 'oxlint'
 
-export type PresetName = (typeof presetEntries)[number][0]
+type BooleanPresetName = Exclude<PresetName, 'importIntegrity'>
+
+export type PresetName =
+  | 'stylistic' |
+  'jsdoc' |
+  'e18e' |
+  'complexity' |
+  'imports' |
+  'importIntegrity' |
+  'promise' |
+  'node' |
+  'eslint' |
+  'oxc' |
+  'typescript' |
+  'vitest'
+export interface ImportIntegrityOptions {
+  monorepo?: boolean
+}
+export type Options = {
+  [Preset in BooleanPresetName]?: boolean
+} & {
+  importIntegrity?: boolean | ImportIntegrityOptions
+}
 export type PresetMap = Record<PresetName, OxlintConfig>
-export type Options = Partial<Record<PresetName, boolean>>
 export type UserConfig = Omit<OxlintConfig, 'rules' | 'extends' | 'ignorePatterns'> & {
   rules?: Record<string, DummyRule>
   extends?: UserConfig[]
