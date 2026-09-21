@@ -58,6 +58,7 @@ export const stylistic: OxlintConfig = {
       ],
       allowSamePrecedence: true
     }],
+    '@stylistic/no-extra-semi': 'error',
     '@stylistic/no-mixed-spaces-and-tabs': 'error',
     '@stylistic/no-multi-spaces': 'error',
     '@stylistic/no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
@@ -71,9 +72,8 @@ export const stylistic: OxlintConfig = {
     '@stylistic/quote-props': ['error', 'as-needed'],
     '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'never' }],
     '@stylistic/rest-spread-spacing': ['error', 'never'],
-    '@stylistic/semi': ['error', 'never'],
-    '@stylistic/no-extra-semi': 'error',
     '@stylistic/semi-spacing': ['error', { before: false, after: true }],
+    '@stylistic/semi': ['error', 'never'],
     '@stylistic/space-before-blocks': ['error', 'always'],
     '@stylistic/space-before-function-paren': ['error', 'never'],
     '@stylistic/space-in-parens': ['error', 'never'],

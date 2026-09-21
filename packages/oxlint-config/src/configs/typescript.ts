@@ -12,8 +12,8 @@ export const typescript: OxlintConfig = {
       files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx'],
       plugins: ['typescript'],
       rules: {
-        'getter-return': 'off',
         'constructor-super': 'off',
+        'getter-return': 'off',
         'no-const-assign': 'off',
         'no-dupe-class-members': 'off',
         'no-dupe-keys': 'off',
@@ -37,6 +37,7 @@ export const typescript: OxlintConfig = {
           fixStyle: 'separate-type-imports',
           prefer: 'type-imports'
         }],
+        'typescript/method-signature-style': ['error', 'property'],
         'typescript/no-dupe-class-members': 'error',
         'typescript/no-dynamic-delete': 'off',
         'typescript/no-empty-object-type': ['error', { allowInterfaces: 'always' }],
@@ -58,8 +59,7 @@ export const typescript: OxlintConfig = {
         'typescript/no-wrapper-object-types': 'error',
         'typescript/require-await': 'error',
         'typescript/triple-slash-reference': 'off',
-        'typescript/unified-signatures': 'off',
-        'typescript/method-signature-style': ['error', 'property']
+        'typescript/unified-signatures': 'off'
       }
     }
   ]

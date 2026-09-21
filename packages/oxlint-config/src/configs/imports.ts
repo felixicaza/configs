@@ -19,8 +19,8 @@ export const imports: OxlintConfig = {
     'import/no-duplicates': 'error',
     'import/no-empty-named-blocks': 'warn',
     'import/no-mutable-exports': 'error',
-    'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
+    'import/no-named-as-default': 'error',
     'import/no-named-default': 'error',
     'import/no-namespace': 'error'
   }
