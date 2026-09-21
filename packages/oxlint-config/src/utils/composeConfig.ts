@@ -6,6 +6,8 @@ function unique<T>(items: readonly T[] = []): T[] {
 
 function mergeObject<T extends Record<string, unknown>>(left?: T, right?: T): T | undefined {
   if (!left && !right) return undefined
+  // SAFETY: left and right are both T, and this function performs a shallow
+  // merge without changing or removing any properties from either object
   return { ...left, ...right } as T
 }
 
@@ -23,13 +25,10 @@ function composeTwo(accumulator: OxlintConfig, config: OxlintConfig): OxlintConf
     plugins: unique([...(accumulator.plugins ?? []), ...(config.plugins ?? [])]),
     jsPlugins: unique([...(accumulator.jsPlugins ?? []), ...(config.jsPlugins ?? [])]),
     overrides: [...(accumulator.overrides ?? []), ...(config.overrides ?? [])],
-    ignorePatterns: mergeIgnorePatterns(
-      accumulator.ignorePatterns as string[] | undefined,
-      config.ignorePatterns as string[] | undefined
-    )
+    ignorePatterns: mergeIgnorePatterns(accumulator.ignorePatterns, config.ignorePatterns)
   }
 }
 
 export function composeConfig(...configs: OxlintConfig[]): OxlintConfig {
-  return configs.reduce(composeTwo, {} as OxlintConfig)
+  return configs.reduce(composeTwo, {})
 }

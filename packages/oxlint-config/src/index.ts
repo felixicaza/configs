@@ -10,7 +10,7 @@ import { selectPresetConfigs } from './utils/selectPresetConfigs.ts'
 export function felixicaza(options: Options = {}, userConfigs: readonly UserConfig[] = []): OxlintConfig {
   const resolved = { ...defaultOptions, ...options }
   const selected = selectPresetConfigs(resolved)
-  const normalizedUserConfigs = userConfigs as OxlintConfig[]
+  const normalizedUserConfigs = userConfigs
 
   return composeConfig(
     env,

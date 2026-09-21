@@ -1,1 +1,9 @@
-export type { PresetMap, PresetName, UserConfig, ImportIntegrityOptions, Options } from './presets.type.ts'
+export type {
+  ImportIntegrityOptions,
+  Options,
+  PresetMap,
+  PresetName,
+  PresetOptionsMap,
+  ResolvedOptions,
+  UserConfig
+} from './presets.type.ts'

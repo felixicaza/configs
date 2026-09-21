@@ -1,5 +1,5 @@
 import type { OxlintConfig } from 'oxlint'
-import type { Options, PresetName } from './types/index.ts'
+import type { Options, PresetName, PresetOptionsMap, ResolvedOptions } from './types/index.ts'
 
 import {
   antiSlop,
@@ -18,10 +18,13 @@ import {
   vitest
 } from './configs/index.ts'
 
-type ResolvedOptions = Required<Options>
 type PresetFactory = (options: ResolvedOptions) => OxlintConfig[]
+type PresetEntry = readonly [PresetName, PresetFactory]
+type PresetOptionResolvers = {
+  [K in keyof PresetOptionsMap]: (value: Required<Options>[K]) => PresetOptionsMap[K]
+}
 
-export const presetEntries: readonly [PresetName, PresetFactory][] = [
+export const presetEntries: readonly PresetEntry[] = [
   ['antiSlop', () => [antiSlop]],
   ['noCommentSlop', () => [noCommentSlop]],
   ['stylistic', () => [stylistic]],
@@ -29,12 +32,7 @@ export const presetEntries: readonly [PresetName, PresetFactory][] = [
   ['e18e', () => [e18e]],
   ['complexity', () => [complexity]],
   ['imports', () => [imports]],
-  [
-    'importIntegrity',
-    options => [
-      importIntegrity(typeof options.importIntegrity === 'object' ? options.importIntegrity : {})
-    ]
-  ],
+  ['importIntegrity', options => [importIntegrity(options.importIntegrity)]],
   ['promise', () => [promise]],
   ['node', () => [node]],
   ['eslint', () => [eslint]],
@@ -59,3 +57,16 @@ export const defaultOptions: Required<Options> = {
   typescript: true,
   vitest: false
 }
+
+/**
+ * Resolves configurable preset values into their concrete options.
+ *
+ * Boolean values use the preset's default options, while explicit option objects are returned unchanged.
+ * @returns A map of resolvers for configurable preset options.
+ */
+export const presetOptionResolvers = {
+  importIntegrity: (value) => {
+    if (value === true || value === false) return {}
+    return value
+  }
+} satisfies PresetOptionResolvers
