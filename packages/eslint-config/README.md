@@ -6,11 +6,11 @@
 [![GitHub actions workflow tests status](https://img.shields.io/github/actions/workflow/status/felixicaza/configs/tests.yml?color=641efc&logo=rocket&logoColor=888888&label=tests&labelColor=ffffff)](https://github.com/felixicaza/configs/actions/workflows/tests.yml)
 [![license](https://img.shields.io/github/license/felixicaza/configs?color=641efc&logo=googledocs&logoColor=888888&labelColor=ffffff)](https://github.com/felixicaza/configs/blob/main/LICENSE)
 
-Configuración de ESLint con opiniones propias para Astro, JSON, JSONC, JSON5 y YAML.
+Configuración de ESLint con opiniones propias para Astro, CSS, JSON, JSONC, JSON5, Package JSON, PNPM Workspace y YAML.
 
 ### ¿Por qué?
 
-Este paquete brinda soporte de linting y formato (vía [ESLint Stylistic](https://eslint.style/)) para archivos que no son compatibles con [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) u [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html).
+Este paquete brinda soporte de linting y formato para archivos que no son compatibles con [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) u [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html).
 
 > [!IMPORTANT]
 > Este paquete planea ser deprecado en el futuro en favor de [Oxlint](https://oxc.rs/docs/guide/usage/linter.html), que es un linter moderno y con mejor rendimiento. Sin embargo, mientras no se soporte completamente plugins de lenguajes, este paquete seguirá estando activo.
@@ -20,8 +20,10 @@ Este paquete brinda soporte de linting y formato (vía [ESLint Stylistic](https:
 ## ✨ Características
 
 - 🚀 Soporte completo de linting y formato para Astro.
-- 📄 Linter y formato para JSON, JSONC y JSON5.
+- 🎨 Reglas de buenas prácticas, formato y ordenamiento de propiedades de CSS.
+- 📄 Reglas de linter y formato para JSON, JSONC y JSON5.
 - 🧾 Ordena correctamente el archivo `package.json`.
+- 📦 Soporte opcional para PNPM Workspace.
 - 🗒️ Soporte de linter y formato para YAML.
 
 ## 📦 Instalación
@@ -71,9 +73,13 @@ Configuraciones del preset:
 
 Un objeto que contiene los presets de configuración a usar. Por defecto, se incluyen todos los presets disponibles.
 
-- `astro` (boolean) — Habilita o deshabilita el preset de configuración para Astro.
-- `json` (boolean) — Habilita o deshabilita el preset de configuración para JSON, JSONC y JSON5.
-- `yaml` (boolean) — Habilita o deshabilita el preset de configuración para YAML.
+- `astro` (boolean) — Habilita o deshabilita el preset de configuración para Astro. `true` por defecto.
+- `css` (boolean) - Habilita o deshabilita el preset de configuración para CSS.  `true` por defecto.
+- `json` (boolean) — Habilita o deshabilita el preset de configuración para JSON, JSONC y JSON5. `true` por defecto.
+- `packageJson` (boolean|object) — Habilita o deshabilita el preset de configuración para `package.json`.  `true` por defecto.
+  - `publishable?` (boolean) - Habilita o deshabilita las reglas relacionadas a la publicación de paquetes en NPM.  `false` por defecto.
+- `pnpm` (boolean) - Habilita o deshabilita el preset de configuración para PNPM Workspace.  `false` por defecto.
+- `yaml` (boolean) — Habilita o deshabilita el preset de configuración para YAML. `true` por defecto.
 
 #### `userConfigs` (object[]) — opcional
 
@@ -89,7 +95,12 @@ Un array que recibe objetos de configuración de usuario adicionales, [compatibl
   export default felixicaza(
     {
       astro: true,
+      css: true,
       json: true,
+      packageJson: {
+        publishable: true
+      },
+      pnpm: false,
       yaml: false
     },
     [
