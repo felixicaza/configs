@@ -29,6 +29,7 @@ export type UserConfig = Omit<OxlintConfig, 'rules' | 'extends' | 'ignorePattern
 }
 
 export type PresetName =
+  | 'antfu'
   | 'antiSlop'
   | 'noCommentSlop'
   | 'stylistic'

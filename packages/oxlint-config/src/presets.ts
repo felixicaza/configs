@@ -2,6 +2,7 @@ import type { OxlintConfig } from 'oxlint'
 import type { Options, PresetName, PresetOptionsMap, ResolvedOptions } from './types/index.ts'
 
 import {
+  antfu,
   antiSlop,
   noCommentSlop,
   stylistic,
@@ -25,6 +26,7 @@ type PresetOptionResolvers = {
 }
 
 export const presetEntries: readonly PresetEntry[] = [
+  ['antfu', () => [antfu]],
   ['antiSlop', () => [antiSlop]],
   ['noCommentSlop', () => [noCommentSlop]],
   ['stylistic', () => [stylistic]],
@@ -42,6 +44,7 @@ export const presetEntries: readonly PresetEntry[] = [
 ]
 
 export const defaultOptions: Required<Options> = {
+  antfu: true,
   antiSlop: true,
   noCommentSlop: true,
   stylistic: true,

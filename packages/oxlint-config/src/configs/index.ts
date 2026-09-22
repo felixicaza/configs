@@ -1,6 +1,7 @@
 export { env } from './env.ts'
 export { typeaware } from './typeaware.ts'
 
+export { antfu } from './antfu.ts'
 export { antiSlop } from './anti-slop.ts'
 export { complexity } from './complexity.ts'
 export { e18e } from './e18e.ts'
