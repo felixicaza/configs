@@ -58,6 +58,6 @@
     "tinyglobby": "0.2.17"
   },
   "peerDependencies": {
-    "eslint": ">=9.38.0"
+    "eslint": ">=10.0.0"
   }
 }
