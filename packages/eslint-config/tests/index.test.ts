@@ -7,7 +7,7 @@ import { felixicaza, felixicazaConfig } from '../src/index.ts'
 import { GLOB_EXCLUDE } from '../src/constants/glob.ts'
 
 function findNamedConfig(configs: Linter.Config[], name: string): Linter.Config | undefined {
-  return configs.find(config => config && typeof config === 'object' && 'name' in config && config.name === name)
+  return configs.find(config => config.name === name)
 }
 
 const allDisabled: Required<Options> = {

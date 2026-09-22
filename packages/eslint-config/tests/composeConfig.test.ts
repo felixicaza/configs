@@ -74,7 +74,7 @@ describe('utils/composeConfig', () => {
   it('skips undefined configs without crashing', () => {
     expect(() =>
       composeConfig(
-        undefined as unknown as Linter.Config,
+        undefined,
         {
           name: 'global-ignores',
           ignores: ['**/dist']
@@ -88,7 +88,7 @@ describe('utils/composeConfig', () => {
     ).not.toThrow()
 
     const result = composeConfig(
-      undefined as unknown as Linter.Config,
+      undefined,
       {
         name: 'global-ignores',
         ignores: ['**/dist']
