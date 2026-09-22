@@ -10,13 +10,9 @@ import { selectPresetConfigs } from './utils/selectPresetConfigs.ts'
 
 export function felixicaza(options: Options = {}, userConfigs: readonly UserConfig[] = []): Linter.Config[] {
   const resolved = { ...defaultOptions, ...options }
-  const selected = selectPresetConfigs(resolved as Required<Options>)
+  const selected = selectPresetConfigs(resolved)
 
-  return composeConfig(
-    globalIgnores(GLOB_EXCLUDE),
-    selected,
-    userConfigs
-  )
+  return composeConfig(globalIgnores(GLOB_EXCLUDE), selected, userConfigs)
 }
 
 export const felixicazaConfig: Linter.Config[] = felixicaza()

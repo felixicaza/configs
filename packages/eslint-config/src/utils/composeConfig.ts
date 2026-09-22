@@ -9,20 +9,16 @@ function isSingleConfig(config: FlatConfigInput): config is Linter.Config {
   return !Array.isArray(config)
 }
 
-function isGlobalIgnoreOnlyConfig(config: unknown): config is Linter.Config & { ignores: string[] } {
-  if (!config || typeof config !== 'object') return false
-
-  const maybeConfig = config as Partial<Linter.Config>
-  if (!Array.isArray(maybeConfig.ignores)) return false
+function isGlobalIgnoreOnlyConfig(config: Linter.Config): config is Linter.Config & { ignores: string[] } {
+  if (!Array.isArray(config.ignores)) return false
 
   const keys = Object.keys(config)
   return keys.every(key => key === 'ignores' || key === 'name')
 }
 
-export function composeConfig(...configs: readonly FlatConfigInput[]): Linter.Config[] {
-  const flattened: Linter.Config[] = configs.flatMap((config): Linter.Config[] => {
-    if (config == null) return []
-
+export function composeConfig(...configs: Array<FlatConfigInput | undefined>): Linter.Config[] {
+  const definedConfigs = configs.filter((config): config is FlatConfigInput => config !== undefined)
+  const flattened: Linter.Config[] = definedConfigs.flatMap((config): Linter.Config[] => {
     if (isSingleConfig(config)) {
       return [config]
     }
