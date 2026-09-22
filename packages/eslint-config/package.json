@@ -1,6 +1,6 @@
 {
   "name": "@felixicaza/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🔍 Configuración de ESLint con opiniones propias para Astro, CSS, JSON, JSONC, JSON5, Package JSON, PNPM Workspace y YAML.",
   "keywords": [
     "eslint",
