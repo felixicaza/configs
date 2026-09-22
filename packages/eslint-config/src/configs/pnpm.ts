@@ -1,10 +1,10 @@
 import type { Linter } from 'eslint'
 
-import { configs } from 'eslint-plugin-pnpm'
+import { configs as pnpmPlugin } from 'eslint-plugin-pnpm'
 
 export const pnpm: Linter.Config[] = [
-  ...configs.json,
-  ...configs.yaml,
+  ...pnpmPlugin.json,
+  ...pnpmPlugin.yaml,
   {
     name: 'felixicaza/pnpm-workspace',
     files: ['pnpm-workspace.yaml'],

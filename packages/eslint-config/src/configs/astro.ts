@@ -1,11 +1,11 @@
 import type { Linter } from 'eslint'
 
-import { configs as configAstro } from 'eslint-plugin-astro'
+import { configs as astroPlugin } from 'eslint-plugin-astro'
 import astroDoctorPlugin from '@santi020k/eslint-plugin-astro-doctor'
-import stylistic from '@stylistic/eslint-plugin'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 
 export const astro: Linter.Config[] = [
-  ...configAstro.base,
+  ...astroPlugin.base,
   {
     name: 'felixicaza/astro',
     files: ['**/*.astro'],
@@ -76,7 +76,7 @@ export const astro: Linter.Config[] = [
     name: 'felixicaza/astro/style',
     files: ['**/*.astro'],
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylisticPlugin
     },
     rules: {
       '@stylistic/array-bracket-spacing': ['error', 'never'],
@@ -163,7 +163,7 @@ export const astro: Linter.Config[] = [
     name: 'felixicaza/astro/internal/style',
     files: ['**/*.astro/*.js', '**/*.astro/*.ts'],
     plugins: {
-      '@stylistic': stylistic
+      '@stylistic': stylisticPlugin
     },
     rules: {
       '@stylistic/indent': ['error', 2]

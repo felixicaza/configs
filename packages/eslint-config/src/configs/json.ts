@@ -1,9 +1,9 @@
 import type { Linter } from 'eslint'
 
-import { configs as configJsonc } from 'eslint-plugin-jsonc'
+import { configs as jsoncPlugin } from 'eslint-plugin-jsonc'
 
 export const json: Linter.Config[] = [
-  ...configJsonc.base,
+  ...jsoncPlugin.base,
   {
     name: 'felixicaza/json/global',
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],

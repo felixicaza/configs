@@ -1,9 +1,9 @@
 import type { Linter } from 'eslint'
 
-import { configs as configYml } from 'eslint-plugin-yml'
+import { configs as ymlPlugin } from 'eslint-plugin-yml'
 
 export const yaml: Linter.Config[] = [
-  ...configYml.base,
+  ...ymlPlugin.base,
   {
     name: 'felixicaza/yaml',
     files: ['**/*.yaml', '**/*.yml'],
