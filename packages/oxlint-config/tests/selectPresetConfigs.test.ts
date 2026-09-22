@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
 import {
+  antfu,
   antiSlop,
   complexity,
   e18e,
@@ -21,6 +22,7 @@ import { selectPresetConfigs } from '../src/utils/selectPresetConfigs.ts'
 describe('utils/selectPresetConfigs', () => {
   it('returns empty list when all presets are disabled', () => {
     const result = selectPresetConfigs({
+      antfu: false,
       antiSlop: false,
       complexity: false,
       e18e: false,
@@ -42,6 +44,7 @@ describe('utils/selectPresetConfigs', () => {
 
   it('selects only complexity preset when complexity is enabled', () => {
     const result = selectPresetConfigs({
+      antfu: false,
       antiSlop: false,
       complexity: true,
       e18e: false,
@@ -63,6 +66,7 @@ describe('utils/selectPresetConfigs', () => {
 
   it('selects only eslint and jsdoc presets when eslint and jsdoc are enabled', () => {
     const result = selectPresetConfigs({
+      antfu: false,
       antiSlop: false,
       complexity: false,
       e18e: false,
@@ -84,6 +88,7 @@ describe('utils/selectPresetConfigs', () => {
 
   it('selects all presets in declaration order when all are enabled', () => {
     const result = selectPresetConfigs({
+      antfu: true,
       antiSlop: true,
       complexity: true,
       e18e: true,
@@ -101,6 +106,7 @@ describe('utils/selectPresetConfigs', () => {
     })
 
     expect(result).toEqual([
+      antfu,
       antiSlop,
       noCommentSlop,
       stylistic,
