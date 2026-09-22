@@ -22,6 +22,7 @@ const allDisabled: Required<Options> = {
   promise: false,
   stylistic: false,
   typescript: false,
+  unicorn: false,
   vitest: false
 }
 

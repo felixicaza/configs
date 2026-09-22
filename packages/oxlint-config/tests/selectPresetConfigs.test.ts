@@ -15,6 +15,7 @@ import {
   promise,
   stylistic,
   typescript,
+  unicorn,
   vitest
 } from '../src/configs/index.ts'
 import { selectPresetConfigs } from '../src/utils/selectPresetConfigs.ts'
@@ -36,6 +37,7 @@ describe('utils/selectPresetConfigs', () => {
       promise: false,
       stylistic: false,
       typescript: false,
+      unicorn: false,
       vitest: false
     })
 
@@ -58,6 +60,7 @@ describe('utils/selectPresetConfigs', () => {
       promise: false,
       stylistic: false,
       typescript: false,
+      unicorn: false,
       vitest: false
     })
 
@@ -80,6 +83,7 @@ describe('utils/selectPresetConfigs', () => {
       promise: false,
       stylistic: false,
       typescript: false,
+      unicorn: false,
       vitest: false
     })
 
@@ -102,6 +106,7 @@ describe('utils/selectPresetConfigs', () => {
       promise: true,
       stylistic: true,
       typescript: true,
+      unicorn: true,
       vitest: true
     })
 
@@ -120,6 +125,7 @@ describe('utils/selectPresetConfigs', () => {
       eslint,
       oxc,
       typescript,
+      unicorn,
       vitest
     ])
   })
