@@ -12,12 +12,15 @@ Configuración de Oxlint con opiniones propias para mantener un código limpio y
 
 - 🧪 Type-Aware Linting habilitado por defecto.
 - 🚀 Soporte completo para JavaScript y TypeScript.
+- 🚫 Reglas código y comentarios Anti-slop.
+- ⚡ Reglas de buenas prácticas de mordernización y performance.
 - 🔀 Reglas para complejidad ciclomática.
 - 🔍 Reglas nativas y portadas de ESLint.
 - 📦 Reglas para imports.
 - 📝 Reglas para comentarios de JSDoc.
 - 🖥️ Reglas para Node.
 - ⚓ Reglas de Oxc.
+- 🦄 Reglas de Unicorn.
 - 🎨 Reglas para formato de ESLint Stylistic.
 - 🔭 Reglas para testing con Vitest.
 
@@ -68,15 +71,22 @@ Configuraciones del preset:
 
 Un objeto que contiene los presets de configuración a usar. Por defecto, se incluyen todos los presets disponibles.
 
+- `antfu` (boolean) - Habilita o deshabilita el preset de configuración de reglas de Antfu. `true` por defecto.
+- `antiSlop` (boolean) - Habilita o deshabilita el preset de configuración anti-slop. `true` por defecto.
+- `noCommentSlop` (boolean) - Habilita o deshabilita el preset de configuración de comentarios de código sin slop. `true` por defecto.
 - `stylistic` (boolean) — Habilita o deshabilita el preset de configuración para formato con ESLint Stylistic. `true` por defecto.
 - `jsdoc` (boolean) — Habilita o deshabilita el preset de configuración para comentarios de JSDoc. `true` por defecto.
+- `e18e` (boolean) - Habilita o deshabilita el preset de configuración para reglas de modernización y performance. `true` por defecto.
 - `complexity` (boolean) — Habilita o deshabilita el preset de configuración para complejidad ciclomática. `true` por defecto.
 - `imports` (boolean) — Habilita o deshabilita el preset de configuración para imports. `true` por defecto.
+- `importIntegrity` (boolean|object) — Habilita o deshabilita el preset de configuración para imports. `true` por defecto.
+  - `monorepo`? (boolean) - Habilita o deshabilita las reglas y configuraciones para monorepos. `false` por defecto.
 - `promise` (boolean) — Habilita o deshabilita el preset de configuración para Promises. `true` por defecto.
 - `node` (boolean) — Habilita o deshabilita el preset de configuración para Node. `true` por defecto.
 - `eslint` (boolean) — Habilita o deshabilita el preset de configuración para reglas nativas y portadas de ESLint. `true` por defecto.
 - `oxc` (boolean) — Habilita o deshabilita el preset de configuración para reglas de Oxc. `true` por defecto.
 - `typescript` (boolean) — Habilita o deshabilita el preset de configuración para TypeScript. `true` por defecto.
+- `unicorn` (boolean) - Habilita o deshabilita el preset de configuración de Unicorn. `true` por defecto.
 - `vitest` (boolean) — Habilita o deshabilita el preset de configuración para testing con Vitest. `false` por defecto.
 
 #### `userConfigs` (object[]) — opcional
@@ -92,15 +102,21 @@ Un array que recibe objetos de configuración de usuario adicionales, [compatibl
 
   export default felixicaza(
     {
+      antfu: true,
+      antiSlop: true,
+      noCommentSlop: false,
       stylistic: true,
       jsdoc: false,
+      e18e: true,
       complexity: true,
       imports: true,
+      importIntegrity: false,
       promise: false,
       node: false,
       eslint: true,
       oxc: true,
       typescript: true,
+      unicorn: true,
       vitest: true
     },
     [
