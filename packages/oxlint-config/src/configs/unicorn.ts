@@ -19,11 +19,11 @@ export const unicorn: OxlintConfig = {
     'unicorn/filename-case': [
       'error',
       {
-        cases: { kebabCase: true, pascalCase: true },
-        ignore: [/^[A-Z]+\..*$/]
+        cases: { camelCase: true, kebabCase: true, pascalCase: true },
+        ignore: ['^[A-Z]+..*$']
       }
     ],
-    'unicorn/import-style': ['error', { checkExportFrom: true }],
+    'unicorn/import-style': ['error', { checkExportFrom: true, styles: { 'node:path': { named: true } } }],
     'unicorn/max-nested-calls': 'error',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'warn',

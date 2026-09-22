@@ -16,6 +16,7 @@ import {
   eslint,
   oxc,
   typescript,
+  unicorn,
   vitest
 } from './configs/index.ts'
 
@@ -40,6 +41,7 @@ export const presetEntries: readonly PresetEntry[] = [
   ['eslint', () => [eslint]],
   ['oxc', () => [oxc]],
   ['typescript', () => [typescript]],
+  ['unicorn', () => [unicorn]],
   ['vitest', () => [vitest]]
 ]
 
@@ -58,6 +60,7 @@ export const defaultOptions: Required<Options> = {
   eslint: true,
   oxc: true,
   typescript: true,
+  unicorn: true,
   vitest: false
 }
 

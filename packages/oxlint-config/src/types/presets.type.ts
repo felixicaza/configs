@@ -43,4 +43,5 @@ export type PresetName =
   | 'eslint'
   | 'oxc'
   | 'typescript'
+  | 'unicorn'
   | 'vitest'
